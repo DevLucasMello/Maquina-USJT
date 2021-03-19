@@ -1,3 +1,6 @@
+import { MenuComponent } from './navegacao/menu/menu/menu.component';
+import { HomeComponent } from './navegacao/home/home/home.component';
+import { FooterComponent } from './navegacao/footer/footer/footer.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,11 +9,19 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+  ],
+  exports: [
+    FooterComponent,
+    HomeComponent,
+    MenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

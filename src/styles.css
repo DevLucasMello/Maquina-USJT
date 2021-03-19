@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main-container{
+  padding-top: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.footer{
+  height: 50px;
+}
+
+input,
+select,
+textarea{
+  max-width: 400px;
+}
+
+.rodape-loja{
+  width: 100%;
+  line-height:50px;
+  font-size:20px;
+  float:left;
+  text-align:center
+}
+
+  .rodape-data{
+    width: 100%;
+    line-height:50px;
+    font-size:16px;
+    float:left;
+    text-align:center
+}
+
+.titulo{
+  font-size: 26px;
+}
+
+.titulo-page{
+  font-size: 30px;
+  text-align: left;
+}
+
+.texto{
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.espaco-ra{
+  padding-left: 50px;
+  float: right;
+}
