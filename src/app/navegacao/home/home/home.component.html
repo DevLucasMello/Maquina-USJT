@@ -1,7 +1,7 @@
 <div class="container main-container">
   <div class="container">
-    <h4>Cadastro</h4>
-    <hr />
+    <h4 class="espaco">Cadastro</h4>
+    <hr class="espaco"/>
     <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
       <div class="form-horizontal">
         <div class="form-group">
@@ -17,10 +17,11 @@
         <div class="form-group">
           <label class="col-md-2 control-label">Digite um valor</label>
           <div class="col-md-10">
-            <input class="form-control" id="cpf" type="text" placeholder="CPF (requerido)" formControlName="cpf" cpf [textMask]="{mask: MASKS.cpf.textMask}" [ngClass]="{'is-invalid': displayMessage.cpf }" />
-
-            <span class="text-danger" *ngIf="displayMessage.cpf">
-              <p [innerHTML]="displayMessage.cpf"></p>
+            <input class="form-control" id="moeda" formControlName="moeda" type="text"
+            currencyMask
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" [ngClass]="{'is-invalid': displayMessage.moeda}" placeholder="R$ 0,00"/>
+            <span class="text-danger" *ngIf="displayMessage.moeda">
+              <p [innerHTML]="displayMessage.moeda"></p>
             </span>
           </div>
         </div>

@@ -49,9 +49,14 @@ textarea{
   font-size: 20px;
   text-align: left;
   margin-left: 20px;
+  margin-top: 50px;
 }
 
 .espaco-ra{
   padding-left: 50px;
   float: right;
+}
+
+.espaco{
+  margin-left: 15px;
 }

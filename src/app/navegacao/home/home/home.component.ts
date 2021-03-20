@@ -1,10 +1,9 @@
 import { ValidationMessages, GenericValidator, DisplayMessage } from './../../../validacao/generic-form-validator';
 import { User } from './../../../models/User';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
 import { FormControlName } from '@angular/forms';
-import { MASKS, NgBrazilValidators } from 'ng-brazil';
-import { CustomValidators } from 'ng2-validation';
+import { MASKS } from 'ng-brazil';
 import { fromEvent, merge, Observable } from 'rxjs';
 
 @Component({
@@ -32,22 +31,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
         minlength: 'O nome precisa ter no mínimo 2 caracteres',
         maxlength: 'O nome precisa ter no máximo 150 caracteres'
       },
-      cpf: {
-        required: 'Informe o CPF',
-        cpf: 'CPF em formato inválido'
-      }      
+      moeda: {
+        required: 'Informe um valor',
+        moeda: 'Valor inválido',
+        min: 'O valor deve ser no mínimo R$ 10,00',
+        max: 'O valor deve ser no máximo R$ 200,00'
+      }
     };
 
     this.genericValidator = new GenericValidator(this.validationMessages);
   }
 
   ngOnInit() {
-    let senha = new FormControl('', [Validators.required, CustomValidators.rangeLength([6,15])]);
-    let senhaConfirm = new FormControl('', [Validators.required, CustomValidators.rangeLength([6,15]), CustomValidators.equalTo(senha)]);
-
     this.cadastroForm = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(150)]],
-      cpf: ['', [Validators.required, NgBrazilValidators.cpf]]      
+      moeda: ['', [Validators.required, Validators.min(10), Validators.max(200)]]
     });
   }
 
@@ -61,8 +59,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   adicionarUsuario(){
-    
-    if(this.cadastroForm.dirty && this.cadastroForm.valid){    
+
+    if(this.cadastroForm.dirty && this.cadastroForm.valid){
     this.user = Object.assign({}, this.user, this.cadastroForm.value);
     this.formResult = JSON.stringify(this.cadastroForm.value);
     }
