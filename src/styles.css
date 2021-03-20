@@ -60,3 +60,213 @@ textarea{
 .espaco{
   margin-left: 15px;
 }
+
+.caixa{
+  height: 500px;
+  width: 400px;
+  background-color: rgb(0, 191, 255, 0.6);
+  margin-top: 100px;
+}
+
+.caixa2{
+  height: 390px;
+  width: 250px;
+  background-color: rgb(240, 255, 255, 0.8);
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+
+.button-comprar{
+  height: 50px;
+  width: 250px;
+  background-color: red;
+  position: relative;
+  left: 20px;
+  bottom: -40px;
+}
+
+.nota-2{
+  height: 40px;
+  width: 90px;
+  background-color: green;
+  position: relative;
+  left: 290px;
+  bottom: 420px;
+}
+
+.nota-5{
+  height: 40px;
+  width: 90px;
+  background-color: green;
+  position: relative;
+  left: 290px;
+  bottom: 400px;
+}
+
+.nota-10{
+  height: 40px;
+  width: 90px;
+  background-color: green;
+  position: relative;
+  left: 290px;
+  bottom: 380px;
+}
+
+.nota-20{
+  height: 40px;
+  width: 90px;
+  background-color: green;
+  position: relative;
+  left: 290px;
+  bottom: 360px;
+}
+
+.nota-50{
+  height: 40px;
+  width: 90px;
+  background-color: green;
+  position: relative;
+  left: 290px;
+  bottom: 340px;
+}
+
+.valor{
+  height: 70px;
+  width: 90px;
+  background-color: gray;
+  position: relative;
+  left: 290px;
+  bottom: 320px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.saldo{
+  height: 70px;
+  width: 90px;
+  background-color: plum;
+  position: relative;
+  left: 290px;
+  bottom: 300px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.caixa-valor{
+  height: 40px;
+  width: 90px;
+  background-color: white;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.caixa-saldo{
+  height: 40px;
+  width: 90px;
+  background-color: white;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.produto-1{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.produto-2{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 130px;
+  top: -105px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.produto-3{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 130px;
+  top: -95px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.produto-4{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 10px;
+  top: -210px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.produto-5{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 10px;
+  top: -200px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.produto-6{
+  height: 116px;
+  width: 110px;
+  position: relative;
+  left: 130px;
+  top: -316px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.caixa-produto-1{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px;
+}
+
+.caixa-produto-2{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px; 
+}
+
+.caixa-produto-3{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px;  
+}
+
+.caixa-produto-4{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px;  
+}
+
+.caixa-produto-5{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px;  
+}
+
+.caixa-produto-6{
+  height: 80px;
+  width: 110px;
+  position: relative;
+  top: -115px;  
+}

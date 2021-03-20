@@ -1,4 +1,4 @@
-<div class="container main-container">
+<div class="container main-container" *ngIf="checkButton">
   <div class="container">
     <h4 class="espaco">Cadastro</h4>
     <hr class="espaco"/>
@@ -13,7 +13,6 @@
             </span>
           </div>
         </div>
-
         <div class="form-group">
           <label class="col-md-2 control-label">Digite um valor</label>
           <div class="col-md-10">
@@ -32,8 +31,46 @@
             </span>
           </div>
         </div>
-
       </div>
     </form>
+  </div>
+</div>
+
+<div class="container main-container" *ngIf="!checkButton">
+  <div class="container">
+    <div class="caixa">
+      <div class="caixa2">
+        <div class="produto-1">R$ 7,00
+          <img class="caixa-produto-1" src="../../../../assets/mEms.png">
+        </div>
+        <div class="produto-2">R$ 7,00
+          <img class="caixa-produto-2" src="../../../../assets/panco.png">
+        </div>
+        <div class="produto-3">R$ 6,00
+          <img class="caixa-produto-3" src="../../../../assets/pe.png">
+        </div>
+        <div class="produto-4">R$ 3,00
+          <img class="caixa-produto-4" src="../../../../assets/fandangos.png">
+        </div>
+        <div class="produto-5">R$ 8,00
+          <img class="caixa-produto-5" src="../../../../assets/doritos.png">
+        </div>
+        <div class="produto-6">R$ 8,00
+          <img class="caixa-produto-6" src="../../../../assets/ruffles.png">
+        </div>
+      </div>
+      <div class="button-comprar"></div>
+      <div class="nota-2"></div>
+      <div class="nota-5"></div>
+      <div class="nota-10"></div>
+      <div class="nota-20"></div>
+      <div class="nota-50"></div>
+      <div class="valor">Valor
+        <div class="caixa-valor">R$ 0,00</div>
+      </div>
+      <div class="saldo">Saldo
+        <div class="caixa-saldo">R$ 100,00</div>
+      </div>
+    </div>
   </div>
 </div>

@@ -16,8 +16,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChildren(FormControlName, {read: ElementRef}) forInputElements: ElementRef[];
 
   cadastroForm: FormGroup;
-  user: User;
-  formResult: string = '';
+  public user: User;
+  public checkButton: boolean =false;
+
   public MASKS = MASKS;
 
   validationMessages: ValidationMessages;
@@ -38,7 +39,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         max: 'O valor deve ser no máximo R$ 200,00'
       }
     };
-
     this.genericValidator = new GenericValidator(this.validationMessages);
   }
 
@@ -62,10 +62,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     if(this.cadastroForm.dirty && this.cadastroForm.valid){
     this.user = Object.assign({}, this.user, this.cadastroForm.value);
-    this.formResult = JSON.stringify(this.cadastroForm.value);
-    }
-    else{
-      this.formResult = "Não submeteu!!!";
+    this.checkButton = true;
     }
   }
 
