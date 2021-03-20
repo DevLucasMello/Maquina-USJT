@@ -1,4 +1,4 @@
-<div class="container main-container" *ngIf="checkButton">
+<div class="container main-container" *ngIf="!checkButton">
   <div class="container">
     <h4 class="espaco">Cadastro</h4>
     <hr class="espaco"/>
@@ -36,8 +36,10 @@
   </div>
 </div>
 
-<div class="container main-container" *ngIf="!checkButton">
+<div class="container main-container" *ngIf="checkButton">
   <div class="container">
+    <span id="titulo-maquina">Bem vindo - </span><span id="nome-comprador">{{user.nome}}</span>
+    <hr class="espaco"/>
     <div class="caixa">
       <div class="caixa2">
         <div class="produto-1">R$ 7,00
@@ -59,17 +61,17 @@
           <img class="caixa-produto-6" src="../../../../assets/ruffles.png">
         </div>
       </div>
-      <div class="button-comprar"></div>
-      <div class="nota-2"></div>
-      <div class="nota-5"></div>
-      <div class="nota-10"></div>
-      <div class="nota-20"></div>
-      <div class="nota-50"></div>
+      <div class="button-comprar">Comprar</div>
+      <img class="nota-2" src="../../../../assets/nota-2.png">
+      <img class="nota-5" src="../../../../assets/nota-5.png">
+      <img class="nota-10" src="../../../../assets/nota-10.png">
+      <img class="nota-20" src="../../../../assets/nota-20.png">
+      <img class="nota-50" src="../../../../assets/nota-50.png">
       <div class="valor">Valor
-        <div class="caixa-valor">R$ 0,00</div>
+        <div id="caixa-valor">R$ 0,00</div>
       </div>
       <div class="saldo">Saldo
-        <div class="caixa-saldo">R$ 100,00</div>
+        <div id="caixa-saldo">{{user.moeda | currencyBrazil}}</div>
       </div>
     </div>
   </div>

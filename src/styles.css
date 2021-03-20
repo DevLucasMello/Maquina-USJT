@@ -40,6 +40,16 @@ textarea{
   font-size: 26px;
 }
 
+#titulo-maquina{
+  font-size: 26px;
+  margin-right: 2px;
+  margin-left: 15px;
+}
+
+#nome-comprador{
+  font-size: 20px;
+}
+
 .titulo-page{
   font-size: 30px;
   text-align: left;
@@ -80,16 +90,19 @@ textarea{
 .button-comprar{
   height: 50px;
   width: 250px;
-  background-color: red;
+  background-color: rgba(30, 144, 255, 1);
   position: relative;
   left: 20px;
   bottom: -40px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .nota-2{
   height: 40px;
   width: 90px;
-  background-color: green;
   position: relative;
   left: 290px;
   bottom: 420px;
@@ -98,75 +111,73 @@ textarea{
 .nota-5{
   height: 40px;
   width: 90px;
-  background-color: green;
   position: relative;
-  left: 290px;
-  bottom: 400px;
+  left: 200px;
+  bottom: 370px;
 }
 
 .nota-10{
   height: 40px;
   width: 90px;
-  background-color: green;
   position: relative;
-  left: 290px;
-  bottom: 380px;
+  left: 110px;
+  bottom: 320px;
 }
 
 .nota-20{
   height: 40px;
   width: 90px;
-  background-color: green;
   position: relative;
-  left: 290px;
-  bottom: 360px;
+  left: 20px;
+  bottom: 270px;
 }
 
 .nota-50{
   height: 40px;
   width: 90px;
-  background-color: green;
   position: relative;
   left: 290px;
-  bottom: 340px;
+  bottom: 260px;
 }
 
 .valor{
-  height: 70px;
+  height: 64px;
   width: 90px;
-  background-color: gray;
   position: relative;
   left: 290px;
-  bottom: 320px;
+  bottom: 250px;
   text-align: center;
   padding-top: 5px;
+  font-weight: 600;
 }
 
 .saldo{
-  height: 70px;
+  height: 64px;
   width: 90px;
-  background-color: plum;
   position: relative;
   left: 290px;
-  bottom: 300px;
+  bottom: 240px;
   text-align: center;
   padding-top: 5px;
+  font-weight: 600;
 }
 
-.caixa-valor{
-  height: 40px;
+#caixa-valor{
+  height: 35px;
   width: 90px;
-  background-color: white;
+  background-color: rgba(255, 248, 220, 1);
   text-align: center;
-  padding-top: 8px;
+  padding-top: 6px;
+  font-weight: 400;
 }
 
-.caixa-saldo{
-  height: 40px;
+#caixa-saldo{
+  height: 35px;
   width: 90px;
-  background-color: white;
+  background-color: rgba(173, 255, 47, 1);
   text-align: center;
-  padding-top: 8px;
+  padding-top: 6px;
+  font-weight: 400;
 }
 
 .produto-1{
@@ -240,33 +251,33 @@ textarea{
   height: 80px;
   width: 110px;
   position: relative;
-  top: -115px; 
+  top: -115px;
 }
 
 .caixa-produto-3{
   height: 80px;
   width: 110px;
   position: relative;
-  top: -115px;  
+  top: -115px;
 }
 
 .caixa-produto-4{
   height: 80px;
   width: 110px;
   position: relative;
-  top: -115px;  
+  top: -115px;
 }
 
 .caixa-produto-5{
   height: 80px;
   width: 110px;
   position: relative;
-  top: -115px;  
+  top: -115px;
 }
 
 .caixa-produto-6{
   height: 80px;
   width: 110px;
   position: relative;
-  top: -115px;  
+  top: -115px;
 }
