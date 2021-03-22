@@ -252,9 +252,8 @@ textarea{
 }
 
 .pessoa-mensagem{
-  width: 600px;
+  width: 430px;
   height: 350px;
-  background-color: brown;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
