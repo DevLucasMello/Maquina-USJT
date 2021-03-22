@@ -1,4 +1,4 @@
-<div class="container main-container" *ngIf="checkButton">
+<div class="container main-container" *ngIf="!checkButton">
   <div class="container">
     <h4 class="espaco">Cadastro</h4>
     <hr class="espaco"/>
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div class="container main-container" *ngIf="!checkButton">
+<div class="container main-container" *ngIf="checkButton">
   <div class="container">
     <div class="row titulo-comprador">
       <div class="col-lg-3 col-sm-12" id="titulo-maquina">Bem vindo - </div>
@@ -81,15 +81,15 @@
           </div>
           <div class="pai-notas-valor-saldo">
             <div class="pai-notas">
-              <img class="nota-2" src="../../../../assets/nota-2.png">
-              <img class="nota-5" src="../../../../assets/nota-5.png">
-              <img class="nota-10" src="../../../../assets/nota-10.png">
-              <img class="nota-20" src="../../../../assets/nota-20.png">
-              <img class="nota-50" src="../../../../assets/nota-50.png">
+              <img class="nota-2" src="../../../../assets/nota-2.png" (click)="adicionarNota2()">
+              <img class="nota-5" src="../../../../assets/nota-5.png" (click)="adicionarNota5()">
+              <img class="nota-10" src="../../../../assets/nota-10.png" (click)="adicionarNota10()">
+              <img class="nota-20" src="../../../../assets/nota-20.png" (click)="adicionarNota20()">
+              <img class="nota-50" src="../../../../assets/nota-50.png" (click)="adicionarNota50()">
             </div>
             <div class="pai-valor-saldo">
               <div class="valor">Valor
-                <div id="caixa-valor">R$ 0,00</div>
+                <div id="caixa-valor">{{this.valor | currencyBrazil}}</div>
               </div>
               <div class="saldo">Saldo
                 <div id="caixa-saldo">{{user.moeda | currencyBrazil}}</div>

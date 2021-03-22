@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   cadastroForm: FormGroup;
   public user: User;
   public checkButton: boolean =false;
+  public valor: number = 0;
 
   public MASKS = MASKS;
 
@@ -61,9 +62,45 @@ export class HomeComponent implements OnInit, AfterViewInit {
   adicionarUsuario(){
 
     if(this.cadastroForm.dirty && this.cadastroForm.valid){
-    this.user = Object.assign({}, this.user, this.cadastroForm.value);
-    this.checkButton = true;
+      this.user = Object.assign({}, this.user, this.cadastroForm.value);
+      this.checkButton = true;
     }
   }
 
+  adicionarNota2(){
+    if(this.user.moeda >= 2){
+      this.valor += 2;
+      this.user.moeda -= 2;
+    }
+
+  }
+
+  adicionarNota5(){
+    if(this.user.moeda >= 5){
+      this.valor += 5;
+      this.user.moeda -= 5;
+    }
+  }
+
+  adicionarNota10(){
+    if(this.user.moeda >= 10){
+      this.valor += 10;
+      this.user.moeda -= 10;
+    }
+  }
+
+  adicionarNota20(){
+    if(this.user.moeda >= 20){
+      this.valor += 20;
+      this.user.moeda -= 20;
+    }
+
+  }
+
+  adicionarNota50(){
+    if(this.user.moeda >= 50){
+      this.valor += 50;
+      this.user.moeda -= 50;
+    }
+  }
 }
