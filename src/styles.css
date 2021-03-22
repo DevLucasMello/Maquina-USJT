@@ -72,93 +72,72 @@ textarea{
 }
 
 .caixa{
-  height: 500px;
-  width: 400px;
+  height: 480px;
+  width: 350px;
   background-color: rgb(0, 191, 255, 0.6);
-  margin-top: 100px;
+  margin-top: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .caixa2{
   height: 390px;
-  width: 250px;
+  width: 210px;
   background-color: rgb(240, 255, 255, 0.8);
-  position: relative;
-  left: 20px;
-  top: 20px;
 }
 
 .button-comprar{
   height: 50px;
-  width: 250px;
-  background-color: rgba(30, 144, 255, 1);
-  position: relative;
-  left: 20px;
-  bottom: -40px;
-  color: white;
-  font-size: 24px;
+  width: 210px;
   text-align: center;
-  padding-top: 5px;
+  padding: 1.5%;
+  margin-left: 5%;
+  background-color: rgba(30, 144, 255, 1);
+  font-size: 24px;
 }
 
 .nota-2{
   height: 40px;
   width: 90px;
-  position: relative;
-  left: 290px;
-  bottom: 420px;
+
 }
 
 .nota-5{
   height: 40px;
   width: 90px;
-  position: relative;
-  left: 200px;
-  bottom: 370px;
+
 }
 
 .nota-10{
   height: 40px;
   width: 90px;
-  position: relative;
-  left: 110px;
-  bottom: 320px;
+
 }
 
 .nota-20{
   height: 40px;
   width: 90px;
-  position: relative;
-  left: 20px;
-  bottom: 270px;
 }
 
 .nota-50{
   height: 40px;
   width: 90px;
-  position: relative;
-  left: 290px;
-  bottom: 260px;
+
 }
 
 .valor{
   height: 64px;
   width: 90px;
-  position: relative;
-  left: 290px;
-  bottom: 250px;
   text-align: center;
-  padding-top: 5px;
   font-weight: 600;
 }
 
 .saldo{
   height: 64px;
   width: 90px;
-  position: relative;
-  left: 290px;
-  bottom: 240px;
   text-align: center;
-  padding-top: 5px;
   font-weight: 600;
 }
 
@@ -181,103 +160,119 @@ textarea{
 }
 
 .produto-1{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 10px;
-  top: 10px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .produto-2{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 130px;
-  top: -105px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .produto-3{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 130px;
-  top: -95px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .produto-4{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 10px;
-  top: -210px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .produto-5{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 10px;
-  top: -200px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
 .produto-6{
-  height: 116px;
-  width: 110px;
-  position: relative;
-  left: 130px;
-  top: -316px;
+  height: 100px;
+  width: 70px;
   text-align: center;
-  padding-top: 90px;
 }
 
-.caixa-produto-1{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-notas{
+  height: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.caixa-produto-2{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-valor-saldo{
+  height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.caixa-produto-3{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-notas-valor-saldo{
+  height: 390px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.caixa-produto-4{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-produtos-1-3-5{
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4%;
 }
 
-.caixa-produto-5{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-produtos-2-4-6{
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4%;
 }
 
-.caixa-produto-6{
-  height: 80px;
-  width: 110px;
-  position: relative;
-  top: -115px;
+.pai-produtos{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pai-produtos-notas-valores-saldo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pessoa-mensagem{
+  width: 600px;
+  height: 350px;
+  background-color: brown;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 19%;
+}
+
+.pessoa{
+  margin: 3%;
+}
+
+.mensagem{
+  margin: 3%;
+}
+
+.caixa-pessoa-mensagem{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }

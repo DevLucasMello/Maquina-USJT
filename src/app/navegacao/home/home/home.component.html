@@ -1,4 +1,4 @@
-<div class="container main-container" *ngIf="!checkButton">
+<div class="container main-container" *ngIf="checkButton">
   <div class="container">
     <h4 class="espaco">Cadastro</h4>
     <hr class="espaco"/>
@@ -36,43 +36,77 @@
   </div>
 </div>
 
-<div class="container main-container" *ngIf="checkButton">
+<div class="container main-container" *ngIf="!checkButton">
   <div class="container">
     <span id="titulo-maquina">Bem vindo - </span><span id="nome-comprador">{{user.nome}}</span>
     <hr class="espaco"/>
-    <div class="caixa">
-      <div class="caixa2">
-        <div class="produto-1">R$ 7,00
-          <img class="caixa-produto-1" src="../../../../assets/mEms.png">
+
+    <div class="caixa-pessoa-mensagem">
+      <div class="caixa">
+        <div class="pai-produtos-notas-valores-saldo">
+          <div class="caixa2">
+            <div class="pai-produtos">
+              <div class="pai-produtos-1-3-5">
+                <div class="produto-1">
+                  <img src="../../../../assets/mEms.png">
+                  R$ 7,00
+                </div>
+                <div class="produto-3">
+                  <img src="../../../../assets/pe.png">
+                  R$ 6,00
+                </div>
+                <div class="produto-5">
+                  <img src="../../../../assets/doritos.png">
+                  R$ 8,00
+                </div>
+              </div>
+              <div class="pai-produtos-2-4-6">
+                <div class="produto-2">
+                  <img src="../../../../assets/panco.png">
+                  R$ 7,00
+                </div>
+                <div class="produto-4">
+                  <img src="../../../../assets/fandangos.png">
+                  R$ 3,00
+                </div>
+                <div class="produto-6">
+                  <img src="../../../../assets/ruffles.png">
+                  R$ 8,00
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pai-notas-valor-saldo">
+            <div class="pai-notas">
+              <img class="nota-2" src="../../../../assets/nota-2.png">
+              <img class="nota-5" src="../../../../assets/nota-5.png">
+              <img class="nota-10" src="../../../../assets/nota-10.png">
+              <img class="nota-20" src="../../../../assets/nota-20.png">
+              <img class="nota-50" src="../../../../assets/nota-50.png">
+            </div>
+            <div class="pai-valor-saldo">
+              <div class="valor">Valor
+                <div id="caixa-valor">R$ 0,00</div>
+              </div>
+              <div class="saldo">Saldo
+                <div id="caixa-saldo">{{user.moeda | currencyBrazil}}</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="produto-2">R$ 7,00
-          <img class="caixa-produto-2" src="../../../../assets/panco.png">
+        <div class="button-comprar">Comprar</div>
+      </div>
+
+      <div class="pessoa-mensagem">
+        <div class="pessoa">
+          <img src="../../../../assets/pessoa.png">
         </div>
-        <div class="produto-3">R$ 6,00
-          <img class="caixa-produto-3" src="../../../../assets/pe.png">
-        </div>
-        <div class="produto-4">R$ 3,00
-          <img class="caixa-produto-4" src="../../../../assets/fandangos.png">
-        </div>
-        <div class="produto-5">R$ 8,00
-          <img class="caixa-produto-5" src="../../../../assets/doritos.png">
-        </div>
-        <div class="produto-6">R$ 8,00
-          <img class="caixa-produto-6" src="../../../../assets/ruffles.png">
+        <div class="mensagem">
+          <img src="../../../../assets/mensagem-1.png">
         </div>
       </div>
-      <div class="button-comprar">Comprar</div>
-      <img class="nota-2" src="../../../../assets/nota-2.png">
-      <img class="nota-5" src="../../../../assets/nota-5.png">
-      <img class="nota-10" src="../../../../assets/nota-10.png">
-      <img class="nota-20" src="../../../../assets/nota-20.png">
-      <img class="nota-50" src="../../../../assets/nota-50.png">
-      <div class="valor">Valor
-        <div id="caixa-valor">R$ 0,00</div>
-      </div>
-      <div class="saldo">Saldo
-        <div id="caixa-saldo">{{user.moeda | currencyBrazil}}</div>
-      </div>
+
     </div>
+
   </div>
 </div>
