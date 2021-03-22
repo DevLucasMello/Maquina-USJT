@@ -1,8 +1,10 @@
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { MenuComponent } from './navegacao/menu/menu/menu.component';
 import { HomeComponent } from './navegacao/home/home/home.component';
 import { FooterComponent } from './navegacao/footer/footer/footer.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +29,9 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     CustomFormsModule,
     FormsModule,
     ReactiveFormsModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    BrowserAnimationsModule,
+    CollapseModule.forRoot()
   ],
   exports: [
     FooterComponent,

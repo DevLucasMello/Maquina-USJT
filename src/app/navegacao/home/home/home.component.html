@@ -38,8 +38,11 @@
 
 <div class="container main-container" *ngIf="!checkButton">
   <div class="container">
-    <span id="titulo-maquina">Bem vindo - </span><span id="nome-comprador">{{user.nome}}</span>
-    <hr class="espaco"/>
+    <div class="row titulo-comprador">
+      <div class="col-lg-3 col-sm-12" id="titulo-maquina">Bem vindo - </div>
+      <div class="col-lg-9" id="nome-comprador">{{user.nome}}</div>
+      <hr class="col-lg-12 espaco"/>
+    </div>
 
     <div class="caixa-pessoa-mensagem">
       <div class="caixa">
@@ -94,7 +97,7 @@
             </div>
           </div>
         </div>
-        <div class="button-comprar">Comprar</div>
+        <div class="btn btn-primary button-comprar">Comprar</div>
       </div>
 
       <div class="pessoa-mensagem">

@@ -10,6 +10,14 @@
   overflow: hidden;
 }
 
+.menu-dropDown{
+  margin-top: 8%;
+}
+
+.teste{
+  position: sticky
+}
+
 .footer{
   height: 50px;
 }
@@ -42,12 +50,12 @@ textarea{
 
 #titulo-maquina{
   font-size: 26px;
-  margin-right: 2px;
-  margin-left: 15px;
+  padding-left: 3%;
 }
 
 #nome-comprador{
   font-size: 20px;
+  padding-top: 1%;
 }
 
 .titulo-page{
@@ -80,12 +88,19 @@ textarea{
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
+  border: 2px solid rgba(50, 50, 50, 0.77);
+  border-radius: 8px;
+  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+		-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+		box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
 }
 
 .caixa2{
   height: 390px;
   width: 210px;
   background-color: rgb(240, 255, 255, 0.8);
+  border: 1px solid rgba(50, 50, 50, 0.77);
+  border-radius: 8px;
 }
 
 .button-comprar{
@@ -94,37 +109,38 @@ textarea{
   text-align: center;
   padding: 1.5%;
   margin-left: 5%;
-  background-color: rgba(30, 144, 255, 1);
   font-size: 24px;
+  cursor: pointer;
 }
 
 .nota-2{
   height: 40px;
   width: 90px;
-
+  cursor: pointer;
 }
 
 .nota-5{
   height: 40px;
   width: 90px;
-
+  cursor: pointer;
 }
 
 .nota-10{
   height: 40px;
   width: 90px;
-
+  cursor: pointer;
 }
 
 .nota-20{
   height: 40px;
   width: 90px;
+  cursor: pointer;
 }
 
 .nota-50{
   height: 40px;
   width: 90px;
-
+  cursor: pointer;
 }
 
 .valor{
@@ -148,6 +164,8 @@ textarea{
   text-align: center;
   padding-top: 6px;
   font-weight: 400;
+  border: 1px solid rgba(50, 50, 50, 0.77);
+  border-radius: 5px;
 }
 
 #caixa-saldo{
@@ -157,42 +175,50 @@ textarea{
   text-align: center;
   padding-top: 6px;
   font-weight: 400;
+  border: 1px solid rgba(50, 50, 50, 0.77);
+  border-radius: 5px;
 }
 
 .produto-1{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .produto-2{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .produto-3{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .produto-4{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .produto-5{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .produto-6{
   height: 100px;
   width: 70px;
   text-align: center;
+  cursor: pointer;
 }
 
 .pai-notas{
@@ -252,21 +278,22 @@ textarea{
 }
 
 .pessoa-mensagem{
-  width: 430px;
+  width: 340px;
   height: 350px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 19%;
+  /* background-color: brown; */
 }
 
 .pessoa{
-  margin: 3%;
+  margin: 1%;
 }
 
 .mensagem{
-  margin: 3%;
+  margin: 1%;
 }
 
 .caixa-pessoa-mensagem{
