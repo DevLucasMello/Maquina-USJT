@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public qtdProduto: number = 0;
   public checkProduto: boolean = false;
   public compra: number = 0;
+  public selecaoProduto: string = '';
+  public botao: boolean = false;
+  public compraRealizada: boolean = false;
 
 
   public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 3}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
@@ -80,6 +83,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
         if(this.user.moeda >= 2){
           this.valor += 2;
           this.user.moeda -= 2;
+          if(this.valor >= this.compra){
+            this.botao = true;
+          }
+        }
+        else{
+          console.log("Você não tem saldo suficiente");
         }
       }
       else{
@@ -96,6 +105,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if(this.compra > this.valor){if(this.user.moeda >= 5){
         this.valor += 5;
         this.user.moeda -= 5;
+        if(this.valor >= this.compra){
+          this.botao = true;
+        }
+      }
+      else{
+        console.log("Você não tem saldo suficiente");
       }
     }
     else{
@@ -112,6 +127,12 @@ adicionarNota10(){
       if(this.user.moeda >= 10){
         this.valor += 10;
         this.user.moeda -= 10;
+        if(this.valor >= this.compra){
+          this.botao = true;
+        }
+      }
+      else{
+        console.log("Você não tem saldo suficiente");
       }
     }
     else{
@@ -128,6 +149,12 @@ adicionarNota20(){
       if(this.user.moeda >= 20){
         this.valor += 20;
         this.user.moeda -= 20;
+        if(this.valor >= this.compra){
+          this.botao = true;
+        }
+      }
+      else{
+        console.log("Você não tem saldo suficiente");
       }
     }
     else{
@@ -144,6 +171,12 @@ adicionarNota50(){
       if(this.user.moeda >= 50){
         this.valor += 50;
         this.user.moeda -= 50;
+        if(this.valor >= this.compra){
+          this.botao = true;
+        }
+      }
+      else{
+        console.log("Você não tem saldo suficiente");
       }
     }
     else{
@@ -158,6 +191,7 @@ adicionarmEms(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'mEms';
   }else{
     console.log("Produto já selecionado")
   }
@@ -167,6 +201,7 @@ adicionarpe(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'pe';
   }else{
     console.log("Produto já selecionado")
   }
@@ -176,6 +211,7 @@ adicionardoritos(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'doritos';
   }else{
     console.log("Produto já selecionado")
   }
@@ -185,6 +221,7 @@ adicionarpanco(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'panco';
   }else{
     console.log("Produto já selecionado")
   }
@@ -194,6 +231,7 @@ adicionarfandangos(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'fandangos';
   }else{
     console.log("Produto já selecionado")
   }
@@ -203,8 +241,19 @@ adicionarruffles(item: Produto){
   if(!this.checkProduto){
     this.checkProduto = true;
     this.compra = item.valor;
+    this.selecaoProduto = 'ruffles';
   }else{
     console.log("Produto já selecionado")
   }
 }
+
+comprar(){
+  this.user.moeda += this.valor - this.compra;
+  this.valor = 0;
+  this.compra = 0;
+  console.log("O produto " + this.selecaoProduto + "foi comprado com sucesso!");
+  this.compraRealizada = true;
+  this.botao = false;
+}
+
 }
