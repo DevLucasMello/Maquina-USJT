@@ -179,6 +179,10 @@ textarea{
   border-radius: 5px;
 }
 
+.produto-border{
+  opacity: 0.3;
+}
+
 .produto-1{
   height: 100px;
   width: 70px;

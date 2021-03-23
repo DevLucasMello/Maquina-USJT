@@ -1,3 +1,4 @@
+import { Produto } from './../../../models/Produto';
 import { ValidationMessages, GenericValidator, DisplayMessage } from './../../../validacao/generic-form-validator';
 import { User } from './../../../models/User';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -17,8 +18,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   cadastroForm: FormGroup;
   public user: User;
-  public checkButton: boolean =false;
+  public checkButton: boolean = false;
   public valor: number = 0;
+  public qtdProduto: number = 0;
+  public checkProduto: boolean = false;
+  public compra: number = 0;
+
+
+  public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 3}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
 
   public MASKS = MASKS;
 
@@ -68,39 +75,136 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   adicionarNota2(){
-    if(this.user.moeda >= 2){
-      this.valor += 2;
-      this.user.moeda -= 2;
-    }
+    if(this.checkProduto){
+      if(this.compra > this.valor){
+        if(this.user.moeda >= 2){
+          this.valor += 2;
+          this.user.moeda -= 2;
+        }
+      }
+      else{
+        console.log("valor suficiente para realizar a compra")
+      }
 
+    }else{
+      console.log("Selecione primeiro um produto")
+    }
   }
 
   adicionarNota5(){
-    if(this.user.moeda >= 5){
-      this.valor += 5;
-      this.user.moeda -= 5;
+    if(this.checkProduto){
+      if(this.compra > this.valor){if(this.user.moeda >= 5){
+        this.valor += 5;
+        this.user.moeda -= 5;
+      }
     }
-  }
-
-  adicionarNota10(){
-    if(this.user.moeda >= 10){
-      this.valor += 10;
-      this.user.moeda -= 10;
+    else{
+      console.log("valor suficiente para realizar a compra")
     }
+  }else{
+    console.log("Selecione primeiro um produto")
   }
+}
 
-  adicionarNota20(){
-    if(this.user.moeda >= 20){
-      this.valor += 20;
-      this.user.moeda -= 20;
+adicionarNota10(){
+  if(this.checkProduto){
+    if(this.compra > this.valor){
+      if(this.user.moeda >= 10){
+        this.valor += 10;
+        this.user.moeda -= 10;
+      }
     }
-
-  }
-
-  adicionarNota50(){
-    if(this.user.moeda >= 50){
-      this.valor += 50;
-      this.user.moeda -= 50;
+    else{
+      console.log("valor suficiente para realizar a compra")
     }
+  }else{
+    console.log("Selecione primeiro um produto")
   }
+}
+
+adicionarNota20(){
+  if(this.checkProduto){
+    if(this.compra > this.valor){
+      if(this.user.moeda >= 20){
+        this.valor += 20;
+        this.user.moeda -= 20;
+      }
+    }
+    else{
+      console.log("valor suficiente para realizar a compra")
+    }
+  }else{
+    console.log("Selecione primeiro um produto")
+  }
+}
+
+adicionarNota50(){
+  if(this.checkProduto){
+    if(this.compra > this.valor){
+      if(this.user.moeda >= 50){
+        this.valor += 50;
+        this.user.moeda -= 50;
+      }
+    }
+    else{
+      console.log("valor suficiente para realizar a compra")
+    }
+  }else{
+    console.log("Selecione primeiro um produto")
+  }
+}
+
+adicionarmEms(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
+
+adicionarpe(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
+
+adicionardoritos(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
+
+adicionarpanco(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
+
+adicionarfandangos(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
+
+adicionarruffles(item: Produto){
+  if(!this.checkProduto){
+    this.checkProduto = true;
+    this.compra = item.valor;
+  }else{
+    console.log("Produto já selecionado")
+  }
+}
 }

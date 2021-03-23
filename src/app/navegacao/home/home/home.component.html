@@ -50,31 +50,31 @@
           <div class="caixa2">
             <div class="pai-produtos">
               <div class="pai-produtos-1-3-5">
-                <div class="produto-1">
-                  <img src="../../../../assets/mEms.png">
-                  R$ 7,00
+                <div class="produto-1" [ngClass]="{'produto-border': checkProduto}">
+                  <img src="../../../../assets/mEms.png" (click)="adicionarmEms(produto[0])">
+                  {{produto[0].valor | currencyBrazil}}
                 </div>
                 <div class="produto-3">
-                  <img src="../../../../assets/pe.png">
-                  R$ 6,00
+                  <img src="../../../../assets/pe.png" (click)="adicionarpe(produto[2])">
+                  {{produto[2].valor | currencyBrazil}}
                 </div>
                 <div class="produto-5">
-                  <img src="../../../../assets/doritos.png">
-                  R$ 8,00
+                  <img src="../../../../assets/doritos.png" (click)="adicionardoritos(produto[4])">
+                  {{produto[4].valor | currencyBrazil}}
                 </div>
               </div>
               <div class="pai-produtos-2-4-6">
                 <div class="produto-2">
-                  <img src="../../../../assets/panco.png">
-                  R$ 7,00
+                  <img src="../../../../assets/panco.png" (click)="adicionarpanco(produto[1])">
+                  {{produto[1].valor | currencyBrazil}}
                 </div>
                 <div class="produto-4">
-                  <img src="../../../../assets/fandangos.png">
-                  R$ 3,00
+                  <img src="../../../../assets/fandangos.png" (click)="adicionarfandangos(produto[3])">
+                  {{produto[3].valor | currencyBrazil}}
                 </div>
                 <div class="produto-6">
-                  <img src="../../../../assets/ruffles.png">
-                  R$ 8,00
+                  <img src="../../../../assets/ruffles.png" (click)="adicionarruffles(produto[5])">
+                  {{produto[5].valor | currencyBrazil}}
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@
           <img src="../../../../assets/pessoa.png">
         </div>
         <div class="mensagem">
-          <img src="../../../../assets/mensagem-1.png">
+          <img src="../../../../assets/mensagem-2.png">
         </div>
       </div>
 
