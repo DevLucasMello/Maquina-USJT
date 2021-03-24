@@ -342,3 +342,105 @@ textarea{
   transform: translate(480px, -50px);
   transition: 3s;
 }
+
+@media (max-width: 600px){
+  .main-container{
+    padding-top: 90px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  }
+
+  .button-comprar{
+    height: 50px;
+    width: 210px;
+    text-align: center;
+    padding: 1.5%;
+    margin-left: 2%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .animacao-mEms{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(110px, 630px);
+    transition: 3s;
+  }
+
+  .animacao-pe{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(110px, 500px);
+    transition: 3s;
+  }
+
+  .animacao-doritos{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(110px, 380px);
+    transition: 3s;
+  }
+
+  .animacao-panco{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(0px, 630px);
+    transition: 3s;
+  }
+
+  .animacao-fandangos{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(0px, 500px);
+    transition: 3s;
+  }
+
+  .animacao-ruffles{
+    -webkit-transform: translate(100px, 100px);
+    transform: translate(0px, 380px);
+    transition: 3s;
+  }
+
+  .pessoa-mensagem{
+    width: 330px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 19%;
+    /* background-color: brown; */
+  }
+
+  .pessoa{
+    margin: 0.5%;
+  }
+
+  .mensagem{
+    margin: 0.5%;
+  }
+
+  .caixa-pessoa-mensagem{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rodape-loja{
+    width: 100%;
+    line-height:50px;
+    font-size:20px;
+    float:left;
+    text-align:center;
+    margin-left: 15%;
+  }
+
+    .rodape-data{
+      width: 100%;
+      line-height:50px;
+      font-size:16px;
+      float:right;
+      text-align:center;
+      margin-right: 15%;
+  }
+}
