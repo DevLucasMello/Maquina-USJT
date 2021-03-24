@@ -27,6 +27,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public botao: boolean = false;
   public compraRealizada: boolean = false;
 
+  public mEms: boolean = false;
+  public pe: boolean = false;
+  public doritos: boolean = false;
+  public panco: boolean = false;
+  public fandangos: boolean = false;
+  public ruffles: boolean = false;
+
 
   public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 3}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
 
@@ -254,6 +261,33 @@ comprar(){
   console.log("O produto " + this.selecaoProduto + "foi comprado com sucesso!");
   this.compraRealizada = true;
   this.botao = false;
+
+  switch(this.compraRealizada){
+
+    case(this.selecaoProduto === 'mEms'):
+    this.mEms = true;
+    break;
+
+    case(this.selecaoProduto === 'pe'):
+    this.pe = true;
+    break;
+
+    case(this.selecaoProduto === 'doritos'):
+    this.doritos = true;
+    break;
+
+    case(this.selecaoProduto === 'panco'):
+    this.panco = true;
+    break;
+
+    case(this.selecaoProduto === 'fandangos'):
+    this.fandangos = true;
+    break;
+
+    case(this.selecaoProduto === 'ruffles'):
+    this.ruffles = true;
+    break;
+  }
 }
 
 }

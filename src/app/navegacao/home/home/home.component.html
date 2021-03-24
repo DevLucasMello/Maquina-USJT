@@ -50,32 +50,59 @@
           <div class="caixa2">
             <div class="pai-produtos">
               <div class="pai-produtos-1-3-5">
-                <div class="produto-1" [ngClass]="{'produto-border': selecaoProduto === 'mEms'}">
+
+                <div class="produto-1" *ngIf="!mEms" [ngClass]="{'produto-border': selecaoProduto === 'mEms'}">
                   <img src="../../../../assets/mEms.png" (click)="adicionarmEms(produto[0])">
                   {{produto[0].valor | currencyBrazil}}
                 </div>
-                <div class="produto-3" [ngClass]="{'produto-border': selecaoProduto === 'pe'}">
+                <div class="produto-1" *ngIf="mEms" [ngClass]="{'animacao-mEms': compraRealizada}">
+                  <img src="../../../../assets/mEms.png">
+                </div>
+
+                <div class="produto-3" *ngIf="!pe" [ngClass]="{'produto-border': selecaoProduto === 'pe'}">
                   <img src="../../../../assets/pe.png" (click)="adicionarpe(produto[2])">
                   {{produto[2].valor | currencyBrazil}}
                 </div>
-                <div class="produto-5" [ngClass]="{'produto-border': selecaoProduto === 'doritos'}">
+                <div class="produto-3" *ngIf="pe" [ngClass]="{'animacao-pe': compraRealizada}">
+                  <img src="../../../../assets/pe.png">
+                </div>
+
+                <div class="produto-5" *ngIf="!doritos" [ngClass]="{'produto-border': selecaoProduto === 'doritos'}">
                   <img src="../../../../assets/doritos.png" (click)="adicionardoritos(produto[4])">
                   {{produto[4].valor | currencyBrazil}}
                 </div>
+                <div class="produto-5" *ngIf="doritos" [ngClass]="{'animacao-doritos': compraRealizada}">
+                  <img src="../../../../assets/doritos.png">
+                </div>
+
               </div>
+
+
               <div class="pai-produtos-2-4-6">
-                <div class="produto-2" [ngClass]="{'produto-border': selecaoProduto === 'panco'}">
+                <div class="produto-2" *ngIf="!panco" [ngClass]="{'produto-border': selecaoProduto === 'panco'}">
                   <img src="../../../../assets/panco.png" (click)="adicionarpanco(produto[1])">
                   {{produto[1].valor | currencyBrazil}}
                 </div>
-                <div class="produto-4" [ngClass]="{'produto-border': selecaoProduto === 'fandangos'}">
+                <div class="produto-2" *ngIf="panco" [ngClass]="{'animacao-panco': compraRealizada}">
+                  <img src="../../../../assets/panco.png">
+                </div>
+
+                <div class="produto-4" *ngIf="!fandangos" [ngClass]="{'produto-border': selecaoProduto === 'fandangos'}">
                   <img src="../../../../assets/fandangos.png" (click)="adicionarfandangos(produto[3])">
                   {{produto[3].valor | currencyBrazil}}
                 </div>
-                <div class="produto-6" [ngClass]="{'produto-border': selecaoProduto === 'ruffles'}">
+                <div class="produto-4" *ngIf="fandangos" [ngClass]="{'animacao-fandangos': compraRealizada}">
+                  <img src="../../../../assets/fandangos.png">
+                </div>
+
+                <div class="produto-6" *ngIf="!ruffles" [ngClass]="{'produto-border': selecaoProduto === 'ruffles'}">
                   <img src="../../../../assets/ruffles.png" (click)="adicionarruffles(produto[5])">
                   {{produto[5].valor | currencyBrazil}}
                 </div>
+                <div class="produto-6" *ngIf="ruffles" [ngClass]="{'animacao-ruffles': compraRealizada}">
+                  <img src="../../../../assets/ruffles.png">
+                </div>
+
               </div>
             </div>
           </div>

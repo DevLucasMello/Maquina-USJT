@@ -306,3 +306,39 @@ textarea{
   flex-direction: row;
   justify-content: space-between;
 }
+
+.animacao-mEms{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(610px, 200px);
+  transition: 3s;
+}
+
+.animacao-pe{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(610px, 70px);
+  transition: 3s;
+}
+
+.animacao-doritos{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(610px, -50px);
+  transition: 3s;
+}
+
+.animacao-panco{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(480px, 200px);
+  transition: 3s;
+}
+
+.animacao-fandangos{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(480px, 70px);
+  transition: 3s;
+}
+
+.animacao-ruffles{
+  -webkit-transform: translate(100px, 100px);
+  transform: translate(480px, -50px);
+  transition: 3s;
+}
