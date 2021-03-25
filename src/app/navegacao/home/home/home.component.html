@@ -55,8 +55,8 @@
                   <img src="../../../../assets/mEms.png" (click)="adicionarmEms(produto[0])">
                   {{produto[0].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="mEms && recomecar"></div>
-                <div class="produto-1" *ngIf="mEms && !recomecar" [ngClass]="{'animacao-mEms': compraRealizada}">
+                <div class="produto-oculto" *ngIf="mEms && removermEms"></div>
+                <div class="produto-1" *ngIf="mEms && !removermEms" [ngClass]="{'animacao-mEms': compraRealizada}">
                   <img src="../../../../assets/mEms.png" (click)="ocultar()">
                 </div>
 
@@ -64,18 +64,18 @@
                   <img src="../../../../assets/pe.png" (click)="adicionarpe(produto[2])">
                   {{produto[2].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="pe  && recomecar"></div>
-                <div class="produto-3" *ngIf="pe && !recomecar" [ngClass]="{'animacao-pe': compraRealizada}">
-                  <img src="../../../../assets/pe.png">
+                <div class="produto-oculto" *ngIf="pe  && removerpe"></div>
+                <div class="produto-3" *ngIf="pe && !removerpe" [ngClass]="{'animacao-pe': compraRealizada}">
+                  <img src="../../../../assets/pe.png" (click)="ocultar()">
                 </div>
 
                 <div class="produto-5" *ngIf="!doritos" [ngClass]="{'produto-border': selecaoProduto === 'doritos'}">
                   <img src="../../../../assets/doritos.png" (click)="adicionardoritos(produto[4])">
                   {{produto[4].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="doritos && recomecar"></div>
-                <div class="produto-5" *ngIf="doritos && !recomecar" [ngClass]="{'animacao-doritos': compraRealizada}">
-                  <img src="../../../../assets/doritos.png">
+                <div class="produto-oculto" *ngIf="doritos && removerdoritos"></div>
+                <div class="produto-5" *ngIf="doritos && !removerdoritos" [ngClass]="{'animacao-doritos': compraRealizada}">
+                  <img src="../../../../assets/doritos.png" (click)="ocultar()">
                 </div>
 
               </div>
@@ -86,27 +86,27 @@
                   <img src="../../../../assets/panco.png" (click)="adicionarpanco(produto[1])">
                   {{produto[1].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="panco && recomecar"></div>
-                <div class="produto-2" *ngIf="panco && !recomecar" [ngClass]="{'animacao-panco': compraRealizada}">
-                  <img src="../../../../assets/panco.png">
+                <div class="produto-oculto" *ngIf="panco && removerpanco"></div>
+                <div class="produto-2" *ngIf="panco && !removerpanco" [ngClass]="{'animacao-panco': compraRealizada}">
+                  <img src="../../../../assets/panco.png" (click)="ocultar()">
                 </div>
 
                 <div class="produto-4" *ngIf="!fandangos" [ngClass]="{'produto-border': selecaoProduto === 'fandangos'}">
                   <img src="../../../../assets/fandangos.png" (click)="adicionarfandangos(produto[3])">
                   {{produto[3].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="fandangos && recomecar"></div>
-                <div class="produto-4" *ngIf="fandangos && !recomecar" [ngClass]="{'animacao-fandangos': compraRealizada}">
-                  <img src="../../../../assets/fandangos.png">
+                <div class="produto-oculto" *ngIf="fandangos && removerfandangos"></div>
+                <div class="produto-4" *ngIf="fandangos && !removerfandangos" [ngClass]="{'animacao-fandangos': compraRealizada}">
+                  <img src="../../../../assets/fandangos.png" (click)="ocultar()">
                 </div>
 
                 <div class="produto-6" *ngIf="!ruffles" [ngClass]="{'produto-border': selecaoProduto === 'ruffles'}">
                   <img src="../../../../assets/ruffles.png" (click)="adicionarruffles(produto[5])">
                   {{produto[5].valor | currencyBrazil}}
                 </div>
-                <div class="produto-oculto" *ngIf="ruffles && recomecar"></div>
-                <div class="produto-6" *ngIf="ruffles && !recomecar" [ngClass]="{'animacao-ruffles': compraRealizada}">
-                  <img src="../../../../assets/ruffles.png">
+                <div class="produto-oculto" *ngIf="ruffles && removerruffles"></div>
+                <div class="produto-6" *ngIf="ruffles && !removerruffles" [ngClass]="{'animacao-ruffles': compraRealizada}">
+                  <img src="../../../../assets/ruffles.png" (click)="ocultar()">
                 </div>
 
               </div>

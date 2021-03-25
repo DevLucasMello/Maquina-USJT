@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public selecaoProduto: string = '';
   public botao: boolean = false;
   public compraRealizada: boolean = false;
-  public recomecar: boolean = false;
+  public qtd: number;
 
   public mEms: boolean = false;
   public pe: boolean = false;
@@ -33,6 +33,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public panco: boolean = false;
   public fandangos: boolean = false;
   public ruffles: boolean = false;
+
+  public removermEms: boolean = false;
+  public removerpe: boolean = false;
+  public removerdoritos: boolean = false;
+  public removerpanco: boolean = false;
+  public removerfandangos: boolean = false;
+  public removerruffles: boolean = false;
 
 
   public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 3}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
@@ -58,6 +65,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     };
     this.genericValidator = new GenericValidator(this.validationMessages);
+    this.qtd = this.produto.length;
   }
 
   ngOnInit() {
@@ -291,11 +299,50 @@ comprar(){
 }
 
 ocultar(){
-  this.recomecar = true;
-  this.checkProduto = false;
-  this.selecaoProduto= '';
-  this.compraRealizada = false;
-  // this.recomecar = false;
+  if(this.qtd > 0){
+    if(this.mEms){
+      if(!this.removermEms){
+        this.qtd -= 1;
+        this.removermEms = true;
+      }
+    }
+    if(this.pe){
+      if(!this.removerpe){
+        this.qtd -= 1;
+        this.removerpe = true;
+      }
+    }
+    if(this.doritos){
+      if(!this.removerdoritos){
+        this.qtd -= 1;
+        this.removerdoritos = true;
+      }
+    }
+    if(this.panco){
+      if(!this.removerpanco){
+        this.qtd -= 1;
+        this.removerpanco = true;
+      }
+    }
+    if(this.fandangos){
+      if(!this.removerfandangos){
+        this.qtd -= 1;
+        this.removerfandangos = true;
+      }
+    }
+    if(this.ruffles){
+      if(!this.removerruffles){
+        this.qtd -= 1;
+        this.removerruffles = true;
+      }
+    }
+    this.compraRealizada = false;
+    this.checkProduto = false;
+    this.selecaoProduto= '';
+  }
+  if(this.qtd === 0){
+    console.log("Os produtos acabaram");
+  }
 }
 
 }
