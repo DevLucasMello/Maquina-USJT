@@ -190,6 +190,11 @@ textarea{
   cursor: pointer;
 }
 
+.produto-oculto{
+  height: 100px;
+  width: 70px;
+}
+
 .produto-2{
   height: 100px;
   width: 70px;
@@ -341,6 +346,10 @@ textarea{
   -webkit-transform: translate(100px, 100px);
   transform: translate(480px, -50px);
   transition: 3s;
+}
+
+.ocultar{
+  display: none;
 }
 
 @media (max-width: 600px){

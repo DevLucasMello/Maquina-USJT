@@ -20,12 +20,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public user: User;
   public checkButton: boolean = false;
   public valor: number = 0;
-  public qtdProduto: number = 0;
   public checkProduto: boolean = false;
   public compra: number = 0;
   public selecaoProduto: string = '';
   public botao: boolean = false;
   public compraRealizada: boolean = false;
+  public recomecar: boolean = false;
 
   public mEms: boolean = false;
   public pe: boolean = false;
@@ -288,6 +288,14 @@ comprar(){
     this.ruffles = true;
     break;
   }
+}
+
+ocultar(){
+  this.recomecar = true;
+  this.checkProduto = false;
+  this.selecaoProduto= '';
+  this.compraRealizada = false;
+  // this.recomecar = false;
 }
 
 }
