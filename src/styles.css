@@ -287,7 +287,7 @@ textarea{
 }
 
 .pessoa-mensagem{
-  width: 340px;
+  width: 345px;
   height: 350px;
   display: flex;
   flex-wrap: wrap;
@@ -417,7 +417,6 @@ textarea{
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 19%;
-    /* background-color: brown; */
   }
 
   .pessoa{

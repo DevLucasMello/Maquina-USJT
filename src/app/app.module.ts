@@ -1,3 +1,5 @@
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent } from './navegacao/modal/modal/modal.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { MenuComponent } from './navegacao/menu/menu/menu.component';
 import { HomeComponent } from './navegacao/home/home/home.component';
@@ -19,7 +21,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     AppComponent,
     FooterComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,12 +34,14 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     ReactiveFormsModule,
     CurrencyMaskModule,
     BrowserAnimationsModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    MatDialogModule
   ],
   exports: [
     FooterComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

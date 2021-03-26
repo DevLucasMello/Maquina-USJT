@@ -138,16 +138,19 @@
           <img src="../../../../assets/pessoa.png">
         </div>
         <div class="mensagem">
-          <img src="../../../../assets/mensagem-2.png" *ngIf="!checkProduto">
+          <img src="../../../../assets/mensagem-2.png" *ngIf="!checkProduto && poderComprar">
         </div>
         <div class="mensagem">
-          <img src="../../../../assets/mensagem-1.png" *ngIf="checkProduto && valor < compra">
+          <img src="../../../../assets/mensagem-1.png" *ngIf="checkProduto && valor < compra && poderComprar">
         </div>
         <div class="mensagem">
-          <img src="../../../../assets/mensagem-3.png" *ngIf="botao && ! compraRealizada">
+          <img src="../../../../assets/mensagem-3.png" *ngIf="botao && ! compraRealizada && poderComprar">
         </div>
         <div class="mensagem">
-          <img src="../../../../assets/mensagem-4.png" *ngIf="compraRealizada">
+          <img src="../../../../assets/mensagem-4.png" *ngIf="compraRealizada && poderComprar">
+        </div>
+        <div class="mensagem">
+          <img src="../../../../assets/mensagem-5.png" *ngIf="!poderComprar">
         </div>
       </div>
 

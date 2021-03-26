@@ -1,3 +1,4 @@
+import { ModalComponent } from './../../modal/modal/modal.component';
 import { Produto } from './../../../models/Produto';
 import { ValidationMessages, GenericValidator, DisplayMessage } from './../../../validacao/generic-form-validator';
 import { User } from './../../../models/User';
@@ -6,6 +7,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChildren } from '@ang
 import { FormControlName } from '@angular/forms';
 import { MASKS } from 'ng-brazil';
 import { fromEvent, merge, Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public selecaoProduto: string = '';
   public botao: boolean = false;
   public compraRealizada: boolean = false;
+  public poderComprar: boolean = true;
   public qtd: number;
 
   public mEms: boolean = false;
@@ -42,7 +45,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public removerruffles: boolean = false;
 
 
-  public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 3}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
+  public produto: Array<Produto> = [({"id": 1, "valor": 7}),({"id": 2, "valor": 7}),({"id": 3, "valor": 6}),({"id": 4, "valor": 4}),({"id": 5, "valor": 8}),({"id": 6, "valor": 8})];
 
   public MASKS = MASKS;
 
@@ -50,7 +53,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   genericValidator: GenericValidator;
   displayMessage: DisplayMessage = {};
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private dialog: MatDialog) {
     this.validationMessages = {
       nome: {
         required: 'O nome é requerido',
@@ -93,172 +96,289 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   adicionarNota2(){
-    if(this.checkProduto){
-      if(this.compra > this.valor){
-        if(this.user.moeda >= 2){
-          this.valor += 2;
-          this.user.moeda -= 2;
-          if(this.valor >= this.compra){
-            this.botao = true;
+    if(this.poderComprar){
+      if(!this.compraRealizada){
+        if(this.checkProduto){
+          if(this.compra > this.valor){
+            if(this.user.moeda >= 2){
+              this.valor += 2;
+              this.user.moeda -= 2;
+              if(this.valor >= this.compra){
+                this.botao = true;
+              }
+            }
+            else{
+              console.log("Você não tem saldo suficiente");
+            }
           }
-        }
-        else{
-          console.log("Você não tem saldo suficiente");
+          else{
+            console.log("valor suficiente para realizar a compra");
+          }
+
+        }else{
+          this.dialog.open(ModalComponent, {
+            panelClass: 'custom-modal', backdropClass: 'blur',
+            data:{
+                title: 'Erro!',
+                text: 'Selecione primeiro um produto',
+                button: 'Fechar'
+            }
+          })
         }
       }
       else{
-        console.log("valor suficiente para realizar a compra")
+        console.log("Clique no produto comprado");
       }
-
-    }else{
-      console.log("Selecione primeiro um produto")
+    }
+    if(this.compraRealizada){
+      console.log("Clique no produto comprado");
     }
   }
 
   adicionarNota5(){
-    if(this.checkProduto){
-      if(this.compra > this.valor){if(this.user.moeda >= 5){
-        this.valor += 5;
-        this.user.moeda -= 5;
-        if(this.valor >= this.compra){
-          this.botao = true;
+    if(this.poderComprar){
+      if(!this.compraRealizada){
+        if(this.checkProduto){
+          if(this.compra > this.valor){if(this.user.moeda >= 5){
+            this.valor += 5;
+            this.user.moeda -= 5;
+            if(this.valor >= this.compra){
+              this.botao = true;
+            }
+          }
+          else{
+            console.log("Você não tem saldo suficiente");
+          }
         }
-      }
-      else{
-        console.log("Você não tem saldo suficiente");
+        else{
+          console.log("valor suficiente para realizar a compra");
+        }
+      }else{
+        console.log("Selecione primeiro um produto");
       }
     }
     else{
-      console.log("valor suficiente para realizar a compra")
+      console.log("Clique no produto comprado");
     }
-  }else{
-    console.log("Selecione primeiro um produto")
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarNota10(){
-  if(this.checkProduto){
-    if(this.compra > this.valor){
-      if(this.user.moeda >= 10){
-        this.valor += 10;
-        this.user.moeda -= 10;
-        if(this.valor >= this.compra){
-          this.botao = true;
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(this.checkProduto){
+        if(this.compra > this.valor){
+          if(this.user.moeda >= 10){
+            this.valor += 10;
+            this.user.moeda -= 10;
+            if(this.valor >= this.compra){
+              this.botao = true;
+            }
+          }
+          else{
+            console.log("Você não tem saldo suficiente");
+          }
         }
-      }
-      else{
-        console.log("Você não tem saldo suficiente");
+        else{
+          console.log("valor suficiente para realizar a compra");
+        }
+      }else{
+        console.log("Selecione primeiro um produto");
       }
     }
     else{
-      console.log("valor suficiente para realizar a compra")
+      console.log("Clique no produto comprado");
     }
-  }else{
-    console.log("Selecione primeiro um produto")
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarNota20(){
-  if(this.checkProduto){
-    if(this.compra > this.valor){
-      if(this.user.moeda >= 20){
-        this.valor += 20;
-        this.user.moeda -= 20;
-        if(this.valor >= this.compra){
-          this.botao = true;
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(this.checkProduto){
+        if(this.compra > this.valor){
+          if(this.user.moeda >= 20){
+            this.valor += 20;
+            this.user.moeda -= 20;
+            if(this.valor >= this.compra){
+              this.botao = true;
+            }
+          }
+          else{
+            console.log("Você não tem saldo suficiente");
+          }
         }
-      }
-      else{
-        console.log("Você não tem saldo suficiente");
+        else{
+          console.log("valor suficiente para realizar a compra");
+        }
+      }else{
+        console.log("Selecione primeiro um produto");
       }
     }
     else{
-      console.log("valor suficiente para realizar a compra")
+      console.log("Clique no produto comprado");
     }
-  }else{
-    console.log("Selecione primeiro um produto")
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarNota50(){
-  if(this.checkProduto){
-    if(this.compra > this.valor){
-      if(this.user.moeda >= 50){
-        this.valor += 50;
-        this.user.moeda -= 50;
-        if(this.valor >= this.compra){
-          this.botao = true;
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(this.checkProduto){
+        if(this.compra > this.valor){
+          if(this.user.moeda >= 50){
+            this.valor += 50;
+            this.user.moeda -= 50;
+            if(this.valor >= this.compra){
+              this.botao = true;
+            }
+          }
+          else{
+            console.log("Você não tem saldo suficiente");
+          }
         }
-      }
-      else{
-        console.log("Você não tem saldo suficiente");
+        else{
+          console.log("valor suficiente para realizar a compra");
+        }
+      }else{
+        console.log("Selecione primeiro um produto");
       }
     }
     else{
-      console.log("valor suficiente para realizar a compra")
+      console.log("Clique no produto comprado");
     }
-  }else{
-    console.log("Selecione primeiro um produto")
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarmEms(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'mEms';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'mEms';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarpe(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'pe';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'pe';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionardoritos(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'doritos';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'doritos';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarpanco(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'panco';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'panco';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarfandangos(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'fandangos';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'fandangos';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
 adicionarruffles(item: Produto){
-  if(!this.checkProduto){
-    this.checkProduto = true;
-    this.compra = item.valor;
-    this.selecaoProduto = 'ruffles';
-  }else{
-    console.log("Produto já selecionado")
+  if(this.poderComprar){
+    if(!this.compraRealizada){
+      if(!this.checkProduto){
+        this.checkProduto = true;
+        this.compra = item.valor;
+        this.selecaoProduto = 'ruffles';
+      }else{
+        console.log("Produto já selecionado");
+      }
+    }
+    else{
+      console.log("Clique no produto comprado");
+    }
+  }
+  if(this.compraRealizada){
+    console.log("Clique no produto comprado");
   }
 }
 
@@ -342,6 +462,11 @@ ocultar(){
   }
   if(this.qtd === 0){
     console.log("Os produtos acabaram");
+    this.poderComprar = false;
+  }
+  if(this.user.moeda < 4){
+    console.log("Você não possui saldo para comprar mais produtos");
+    this.poderComprar = false;
   }
 }
 

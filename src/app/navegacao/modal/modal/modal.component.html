@@ -1,0 +1,14 @@
+<div *ngIf ="keep != true" class="modal-body">
+  <span class="modal-title">{{title}}</span>
+  <p class="modal-text" [innerHTML]="text"></p>
+  <button (click)="close()" class="modal-button">{{button}}</button>
+  <!-- <button (click)="closeX()" class="close"><img src="/src/assets/x.png" alt="X"></button> -->
+     <button (click)="closeX()" class="close">X</button>
+</div>
+<div   *ngIf ="keep == true" class="modal-body">
+  <span class="modal-title">{{title}}</span>
+  <p class="modal-text" [innerHTML]="text"></p>
+  <button (click)="close()" class="modal-button2">{{button}}</button>
+  <button (click)="closeX()" class="closeX2">X</button>
+  <!--    <button (click)="closeX()" class="close">X</button>-->
+</div>
