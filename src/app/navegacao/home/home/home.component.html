@@ -5,7 +5,7 @@
     <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
       <div class="form-horizontal">
         <div class="form-group">
-          <label class="col-md-2 control-label" for="nome">Digite seu nome</label>
+          <label class="col-md-3 col-sm-5 control-label" for="nome">Digite seu nome</label>
           <div class="col-md-10">
             <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" formControlName="nome" [ngClass]="{'is-invalid': displayMessage.nome}"/>
             <span class="text-danger" *ngIf="displayMessage.nome">
@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-2 control-label">Digite um valor</label>
+          <label class="col-md-3 col-sm-5 control-label">Digite um valor</label>
           <div class="col-md-10">
             <input class="form-control" id="moeda" formControlName="moeda" type="text"
             currencyMask

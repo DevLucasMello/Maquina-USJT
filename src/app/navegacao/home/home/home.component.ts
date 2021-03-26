@@ -108,11 +108,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
               }
             }
             else{
-              console.log("Você não tem saldo suficiente");
+              this.dialog.open(ModalComponent, {
+                panelClass: 'custom-modal', backdropClass: 'blur',
+                data:{
+                    title: 'Erro!',
+                    text: 'Você não tem saldo suficiente',
+                    button: 'Fechar'
+                }
+              })
             }
           }
           else{
-            console.log("valor suficiente para realizar a compra");
+            this.dialog.open(ModalComponent, {
+              panelClass: 'custom-modal', backdropClass: 'blur',
+              data:{
+                  title: 'Erro!',
+                  text: 'Valor suficiente para realizar a compra',
+                  button: 'Fechar'
+              }
+            })
           }
 
         }else{
@@ -127,11 +141,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       }
       else{
-        console.log("Clique no produto comprado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Clique no produto comprado',
+              button: 'Fechar'
+          }
+        })
       }
-    }
-    if(this.compraRealizada){
-      console.log("Clique no produto comprado");
     }
   }
 
@@ -147,22 +165,47 @@ export class HomeComponent implements OnInit, AfterViewInit {
             }
           }
           else{
-            console.log("Você não tem saldo suficiente");
+            this.dialog.open(ModalComponent, {
+              panelClass: 'custom-modal', backdropClass: 'blur',
+              data:{
+                  title: 'Erro!',
+                  text: 'Você não tem saldo suficiente',
+                  button: 'Fechar'
+              }
+            })
           }
         }
         else{
-          console.log("valor suficiente para realizar a compra");
+          this.dialog.open(ModalComponent, {
+            panelClass: 'custom-modal', backdropClass: 'blur',
+            data:{
+                title: 'Erro!',
+                text: 'Valor suficiente para realizar a compra',
+                button: 'Fechar'
+            }
+          })
         }
       }else{
-        console.log("Selecione primeiro um produto");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Selecione primeiro um produto',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -179,22 +222,47 @@ adicionarNota10(){
             }
           }
           else{
-            console.log("Você não tem saldo suficiente");
+            this.dialog.open(ModalComponent, {
+              panelClass: 'custom-modal', backdropClass: 'blur',
+              data:{
+                  title: 'Erro!',
+                  text: 'Você não tem saldo suficiente',
+                  button: 'Fechar'
+              }
+            })
           }
         }
         else{
-          console.log("valor suficiente para realizar a compra");
+          this.dialog.open(ModalComponent, {
+            panelClass: 'custom-modal', backdropClass: 'blur',
+            data:{
+                title: 'Erro!',
+                text: 'Valor suficiente para realizar a compra',
+                button: 'Fechar'
+            }
+          })
         }
       }else{
-        console.log("Selecione primeiro um produto");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Selecione primeiro um produto',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -211,22 +279,47 @@ adicionarNota20(){
             }
           }
           else{
-            console.log("Você não tem saldo suficiente");
+            this.dialog.open(ModalComponent, {
+              panelClass: 'custom-modal', backdropClass: 'blur',
+              data:{
+                  title: 'Erro!',
+                  text: 'Você não tem saldo suficiente',
+                  button: 'Fechar'
+              }
+            })
           }
         }
         else{
-          console.log("valor suficiente para realizar a compra");
+          this.dialog.open(ModalComponent, {
+            panelClass: 'custom-modal', backdropClass: 'blur',
+            data:{
+                title: 'Erro!',
+                text: 'Valor suficiente para realizar a compra',
+                button: 'Fechar'
+            }
+          })
         }
       }else{
-        console.log("Selecione primeiro um produto");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Selecione primeiro um produto',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -243,22 +336,47 @@ adicionarNota50(){
             }
           }
           else{
-            console.log("Você não tem saldo suficiente");
+            this.dialog.open(ModalComponent, {
+              panelClass: 'custom-modal', backdropClass: 'blur',
+              data:{
+                  title: 'Erro!',
+                  text: 'Você não tem saldo suficiente',
+                  button: 'Fechar'
+              }
+            })
           }
         }
         else{
-          console.log("valor suficiente para realizar a compra");
+          this.dialog.open(ModalComponent, {
+            panelClass: 'custom-modal', backdropClass: 'blur',
+            data:{
+                title: 'Erro!',
+                text: 'Valor suficiente para realizar a compra',
+                button: 'Fechar'
+            }
+          })
         }
       }else{
-        console.log("Selecione primeiro um produto");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Selecione primeiro um produto',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -270,15 +388,26 @@ adicionarmEms(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'mEms';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -290,15 +419,26 @@ adicionarpe(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'pe';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -310,15 +450,26 @@ adicionardoritos(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'doritos';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -330,15 +481,26 @@ adicionarpanco(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'panco';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -350,15 +512,26 @@ adicionarfandangos(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'fandangos';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -370,15 +543,26 @@ adicionarruffles(item: Produto){
         this.compra = item.valor;
         this.selecaoProduto = 'ruffles';
       }else{
-        console.log("Produto já selecionado");
+        this.dialog.open(ModalComponent, {
+          panelClass: 'custom-modal', backdropClass: 'blur',
+          data:{
+              title: 'Erro!',
+              text: 'Produto já selecionado',
+              button: 'Fechar'
+          }
+        })
       }
     }
     else{
-      console.log("Clique no produto comprado");
+      this.dialog.open(ModalComponent, {
+        panelClass: 'custom-modal', backdropClass: 'blur',
+        data:{
+            title: 'Erro!',
+            text: 'Clique no produto comprado',
+            button: 'Fechar'
+        }
+      })
     }
-  }
-  if(this.compraRealizada){
-    console.log("Clique no produto comprado");
   }
 }
 
@@ -386,7 +570,16 @@ comprar(){
   this.user.moeda += this.valor - this.compra;
   this.valor = 0;
   this.compra = 0;
-  console.log("O produto " + this.selecaoProduto + "foi comprado com sucesso!");
+  if(this.compraRealizada){
+    this.dialog.open(ModalComponent, {
+      panelClass: 'custom-modal', backdropClass: 'blur',
+      data:{
+          title: 'Docelândia!',
+          text: 'O produto ' + this.selecaoProduto + 'foi comprado com sucesso!',
+          button: 'Fechar'
+      }
+    })
+  }
   this.compraRealizada = true;
   this.botao = false;
 
@@ -461,11 +654,9 @@ ocultar(){
     this.selecaoProduto= '';
   }
   if(this.qtd === 0){
-    console.log("Os produtos acabaram");
     this.poderComprar = false;
   }
   if(this.user.moeda < 4){
-    console.log("Você não possui saldo para comprar mais produtos");
     this.poderComprar = false;
   }
 }
