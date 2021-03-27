@@ -1,0 +1,71 @@
+.modal-body{
+  justify-content: center;
+  padding: 10px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-title{
+  /*font-family: poppins;*/
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.modal-text{
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  word-wrap: break-word;
+  color: white;
+  line-height: 25px;
+}
+
+.modal-button{
+  background-color: #044894;
+  border-radius: 05px;
+  width: 80%;
+  color: white;
+  height: 35px;
+  border: 1px solid #044894;
+  outline: none;
+  margin-top: 15px;
+  cursor: pointer;
+  /*font-family: roboto;*/
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.modal-button2{
+  background-color: #F09E05;
+  border-radius: 05px;
+  width: 80%;
+  color: white;
+  height: 35px;
+  border: 1px solid #F09E05;
+  outline: none;
+  margin-top: 15px;
+  cursor: pointer;
+  /*font-family: roboto;*/
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.close{
+ position: absolute;
+ top: 0;
+ right: 0;
+ color: #044894;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ margin: 0;
+}
+
+.closeX2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
