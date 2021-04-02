@@ -1,160 +1,21 @@
-<div class="container main-container" *ngIf="!checkButton">
-  <div class="container">
-    <h4 class="espaco">Cadastro</h4>
-    <hr class="espaco"/>
-    <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
-      <div class="form-horizontal">
-        <div class="form-group">
-          <label class="col-md-3 col-sm-5 control-label" for="nome">Digite seu nome</label>
-          <div class="col-md-10">
-            <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" formControlName="nome" [ngClass]="{'is-invalid': displayMessage.nome}"/>
-            <span class="text-danger" *ngIf="displayMessage.nome">
-              <p [innerHTML]="displayMessage.nome"></p>
-            </span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-3 col-sm-5 control-label">Digite um valor</label>
-          <div class="col-md-10">
-            <input class="form-control" id="moeda" formControlName="moeda" type="text"
-            currencyMask
-            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" [ngClass]="{'is-invalid': displayMessage.moeda}" placeholder="R$ 0,00"/>
-            <span class="text-danger" *ngIf="displayMessage.moeda">
-              <p [innerHTML]="displayMessage.moeda"></p>
-            </span>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-md-4 col-md-offset-2">
-            <span>
-              <button class="btn btn-primary" id="Registrar" [disabled]="!cadastroForm.valid" type="submit">Confirmar</button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </form>
+<div *ngIf="!maquina && !elevador">
+  <div class="container main-container">
+    <div class="container">
+
+      <h4 class="espaco">Escolha da animação</h4>
+      <hr class="espaco"/>
+
+      <button type="button" class="espaco btn btn-primary col-6"(click)="ativaMaquina()">Maquina de Doces</button>
+      <button type="button" class="espaco btn btn-secondary col-6 homeButton"(click)="ativaElevador()">Elevador</button>
+    </div>
   </div>
 </div>
 
-<div class="container main-container" *ngIf="checkButton">
-  <div class="container">
-    <div class="row titulo-comprador">
-      <div class="col-lg-3 col-sm-12" id="titulo-maquina">Bem vindo - </div>
-      <div class="col-lg-9" id="nome-comprador">{{user.nome}}</div>
-      <hr class="col-lg-12 espaco"/>
-    </div>
 
-    <div class="caixa-pessoa-mensagem">
-      <div class="caixa">
-        <div class="pai-produtos-notas-valores-saldo">
-          <div class="caixa2">
-            <div class="pai-produtos">
-              <div class="pai-produtos-1-3-5">
+<div *ngIf="maquina">
+  <app-maquina></app-maquina>
+</div>
 
-                <div class="produto-1" *ngIf="!mEms" [ngClass]="{'produto-border': selecaoProduto === 'mEms'}">
-                  <img src="../../../../assets/mEms.png" (click)="adicionarmEms(produto[0])">
-                  {{produto[0].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="mEms && removermEms"></div>
-                <div class="produto-1" *ngIf="mEms && !removermEms" [ngClass]="{'animacao-mEms': compraRealizada}">
-                  <img src="../../../../assets/mEms.png" (click)="ocultar()">
-                </div>
-
-                <div class="produto-3" *ngIf="!pe" [ngClass]="{'produto-border': selecaoProduto === 'pe'}">
-                  <img src="../../../../assets/pe.png" (click)="adicionarpe(produto[2])">
-                  {{produto[2].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="pe  && removerpe"></div>
-                <div class="produto-3" *ngIf="pe && !removerpe" [ngClass]="{'animacao-pe': compraRealizada}">
-                  <img src="../../../../assets/pe.png" (click)="ocultar()">
-                </div>
-
-                <div class="produto-5" *ngIf="!doritos" [ngClass]="{'produto-border': selecaoProduto === 'doritos'}">
-                  <img src="../../../../assets/doritos.png" (click)="adicionardoritos(produto[4])">
-                  {{produto[4].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="doritos && removerdoritos"></div>
-                <div class="produto-5" *ngIf="doritos && !removerdoritos" [ngClass]="{'animacao-doritos': compraRealizada}">
-                  <img src="../../../../assets/doritos.png" (click)="ocultar()">
-                </div>
-
-              </div>
-
-
-              <div class="pai-produtos-2-4-6">
-                <div class="produto-2" *ngIf="!panco" [ngClass]="{'produto-border': selecaoProduto === 'panco'}">
-                  <img src="../../../../assets/panco.png" (click)="adicionarpanco(produto[1])">
-                  {{produto[1].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="panco && removerpanco"></div>
-                <div class="produto-2" *ngIf="panco && !removerpanco" [ngClass]="{'animacao-panco': compraRealizada}">
-                  <img src="../../../../assets/panco.png" (click)="ocultar()">
-                </div>
-
-                <div class="produto-4" *ngIf="!fandangos" [ngClass]="{'produto-border': selecaoProduto === 'fandangos'}">
-                  <img src="../../../../assets/fandangos.png" (click)="adicionarfandangos(produto[3])">
-                  {{produto[3].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="fandangos && removerfandangos"></div>
-                <div class="produto-4" *ngIf="fandangos && !removerfandangos" [ngClass]="{'animacao-fandangos': compraRealizada}">
-                  <img src="../../../../assets/fandangos.png" (click)="ocultar()">
-                </div>
-
-                <div class="produto-6" *ngIf="!ruffles" [ngClass]="{'produto-border': selecaoProduto === 'ruffles'}">
-                  <img src="../../../../assets/ruffles.png" (click)="adicionarruffles(produto[5])">
-                  {{produto[5].valor | currencyBrazil}}
-                </div>
-                <div class="produto-oculto" *ngIf="ruffles && removerruffles"></div>
-                <div class="produto-6" *ngIf="ruffles && !removerruffles" [ngClass]="{'animacao-ruffles': compraRealizada}">
-                  <img src="../../../../assets/ruffles.png" (click)="ocultar()">
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="pai-notas-valor-saldo">
-            <div class="pai-notas">
-              <img class="nota-2" src="../../../../assets/nota-2.png" (click)="adicionarNota2()">
-              <img class="nota-5" src="../../../../assets/nota-5.png" (click)="adicionarNota5()">
-              <img class="nota-10" src="../../../../assets/nota-10.png" (click)="adicionarNota10()">
-              <img class="nota-20" src="../../../../assets/nota-20.png" (click)="adicionarNota20()">
-              <img class="nota-50" src="../../../../assets/nota-50.png" (click)="adicionarNota50()">
-            </div>
-            <div class="pai-valor-saldo">
-              <div class="valor">Valor
-                <div id="caixa-valor">{{this.valor | currencyBrazil}}</div>
-              </div>
-              <div class="saldo">Saldo
-                <div id="caixa-saldo">{{user.moeda | currencyBrazil}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-primary button-comprar" [disabled]="!botao" (click)="comprar()">Comprar</button>
-      </div>
-
-      <div class="pessoa-mensagem">
-        <div class="pessoa">
-          <img src="../../../../assets/pessoa.png">
-        </div>
-        <div class="mensagem">
-          <img src="../../../../assets/mensagem-2.png" *ngIf="!checkProduto && poderComprar">
-        </div>
-        <div class="mensagem">
-          <img src="../../../../assets/mensagem-1.png" *ngIf="checkProduto && valor < compra && poderComprar">
-        </div>
-        <div class="mensagem">
-          <img src="../../../../assets/mensagem-3.png" *ngIf="botao && ! compraRealizada && poderComprar">
-        </div>
-        <div class="mensagem">
-          <img src="../../../../assets/mensagem-4.png" *ngIf="compraRealizada && poderComprar">
-        </div>
-        <div class="mensagem">
-          <img src="../../../../assets/mensagem-5.png" *ngIf="!poderComprar">
-        </div>
-      </div>
-
-    </div>
-
-  </div>
+<div *ngIf="elevador">
+  <app-elevador></app-elevador>
 </div>

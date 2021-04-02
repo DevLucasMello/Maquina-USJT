@@ -1,8 +1,10 @@
+import { ElevadorComponent } from './navegacao/home/elevador/elevador.component';
+import { HomeComponent } from './navegacao/home/home/home.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './navegacao/modal/modal/modal.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { MenuComponent } from './navegacao/menu/menu/menu.component';
-import { HomeComponent } from './navegacao/home/home/home.component';
+import { MaquinaComponent } from './navegacao/home/maquina/maquina.component';
 import { FooterComponent } from './navegacao/footer/footer/footer.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +23,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     AppComponent,
     FooterComponent,
     HomeComponent,
+    MaquinaComponent,
+    ElevadorComponent,
     MenuComponent,
     ModalComponent
   ],
@@ -40,6 +44,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
   exports: [
     FooterComponent,
     HomeComponent,
+    MaquinaComponent,
+    ElevadorComponent,
     MenuComponent,
     ModalComponent
   ],
