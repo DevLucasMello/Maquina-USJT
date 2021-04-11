@@ -172,6 +172,14 @@
   margin-bottom: 3%;
 }
 
+.elevador-vazio{
+  width: 20%;
+  height: 60%;
+  margin-left: 45%;
+  margin-bottom: 3%;
+  z-index: -1;
+}
+
 .numero{
   width: 50%;
   height: 50%;
