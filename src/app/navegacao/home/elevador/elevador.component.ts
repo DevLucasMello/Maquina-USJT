@@ -69,9 +69,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -80,16 +80,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 1 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar1PortaAberta){
           if(this.pessoaAndar1){
             this.andar1Subir = true;
             this.botao.push(andar);
@@ -103,9 +103,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -114,16 +114,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 2 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar2PortaAberta){
           if(this.pessoaAndar2){
             this.andar2Subir = true;
             this.botao.push(andar);
@@ -137,9 +137,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -148,16 +148,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 3 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar3PortaAberta){
           if(this.pessoaAndar3){
             this.andar3Subir = true;
             this.botao.push(andar);
@@ -171,9 +171,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -182,22 +182,14 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
-      default: this.dialog.open(ModalComponent, {
-        panelClass: 'custom-modal', backdropClass: 'blur',
-        data:{
-            title: 'Erro!',
-            text: 'Andar inexistente',
-            button: 'Fechar'
-        }
-      })
     }
   }
 
@@ -234,9 +226,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -245,16 +237,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 1 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar1PortaAberta){
           if(this.pessoaAndar1){
             this.andar1Descer = true;
             this.botao.push(andar);
@@ -268,9 +260,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -279,16 +271,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 2 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar2PortaAberta){
           if(this.pessoaAndar2){
             this.andar2Descer = true;
             this.botao.push(andar);
@@ -302,9 +294,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -313,16 +305,16 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
       case 3 :{
-        if(!this.andar0PortaAberta){
+        if(!this.andar3PortaAberta){
           if(this.pessoaAndar3){
             this.andar3Descer = true;
             this.botao.push(andar);
@@ -336,9 +328,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Não tem pessoas nesse andar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Não tem pessoas nesse andar',
+                button: 'Fechar'
               }
             })
           }
@@ -347,22 +339,14 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'O Elevador já está no local',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'O Elevador já está no local',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
-      default: this.dialog.open(ModalComponent, {
-        panelClass: 'custom-modal', backdropClass: 'blur',
-        data:{
-            title: 'Erro!',
-            text: 'Andar inexistente',
-            button: 'Fechar'
-        }
-      })
     }
   }
 
@@ -380,9 +364,9 @@ export class ElevadorComponent implements OnInit {
               this.dialog.open(ModalComponent, {
                 panelClass: 'custom-modal', backdropClass: 'blur',
                 data:{
-                    title: 'Erro!',
-                    text: 'O elevador não está neste andar',
-                    button: 'Fechar'
+                  title: 'Erro!',
+                  text: 'O elevador não está neste andar',
+                  button: 'Fechar'
                 }
               })
             }
@@ -391,9 +375,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Deixe as pessoas saírem para poder entrar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Deixe as pessoas saírem para poder entrar',
+                button: 'Fechar'
               }
             })
           }
@@ -402,9 +386,9 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'Não tem pessoas nesse andar',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'Não tem pessoas nesse andar',
+              button: 'Fechar'
             }
           })
         }
@@ -422,9 +406,9 @@ export class ElevadorComponent implements OnInit {
               this.dialog.open(ModalComponent, {
                 panelClass: 'custom-modal', backdropClass: 'blur',
                 data:{
-                    title: 'Erro!',
-                    text: 'O elevador não está neste andar',
-                    button: 'Fechar'
+                  title: 'Erro!',
+                  text: 'O elevador não está neste andar',
+                  button: 'Fechar'
                 }
               })
             }
@@ -432,9 +416,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Deixe as pessoas saírem para poder entrar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Deixe as pessoas saírem para poder entrar',
+                button: 'Fechar'
               }
             })
           }
@@ -443,9 +427,9 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'Não tem pessoas nesse andar',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'Não tem pessoas nesse andar',
+              button: 'Fechar'
             }
           })
         }
@@ -463,9 +447,9 @@ export class ElevadorComponent implements OnInit {
               this.dialog.open(ModalComponent, {
                 panelClass: 'custom-modal', backdropClass: 'blur',
                 data:{
-                    title: 'Erro!',
-                    text: 'O elevador não está neste andar',
-                    button: 'Fechar'
+                  title: 'Erro!',
+                  text: 'O elevador não está neste andar',
+                  button: 'Fechar'
                 }
               })
             }
@@ -473,9 +457,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Deixe as pessoas saírem para poder entrar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Deixe as pessoas saírem para poder entrar',
+                button: 'Fechar'
               }
             })
           }
@@ -484,9 +468,9 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'Não tem pessoas nesse andar',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'Não tem pessoas nesse andar',
+              button: 'Fechar'
             }
           })
         }
@@ -504,9 +488,9 @@ export class ElevadorComponent implements OnInit {
               this.dialog.open(ModalComponent, {
                 panelClass: 'custom-modal', backdropClass: 'blur',
                 data:{
-                    title: 'Erro!',
-                    text: 'O elevador não está neste andar',
-                    button: 'Fechar'
+                  title: 'Erro!',
+                  text: 'O elevador não está neste andar',
+                  button: 'Fechar'
                 }
               })
             }
@@ -514,9 +498,9 @@ export class ElevadorComponent implements OnInit {
             this.dialog.open(ModalComponent, {
               panelClass: 'custom-modal', backdropClass: 'blur',
               data:{
-                  title: 'Erro!',
-                  text: 'Deixe as pessoas saírem para poder entrar',
-                  button: 'Fechar'
+                title: 'Erro!',
+                text: 'Deixe as pessoas saírem para poder entrar',
+                button: 'Fechar'
               }
             })
           }
@@ -525,22 +509,14 @@ export class ElevadorComponent implements OnInit {
           this.dialog.open(ModalComponent, {
             panelClass: 'custom-modal', backdropClass: 'blur',
             data:{
-                title: 'Erro!',
-                text: 'Não tem pessoas nesse andar',
-                button: 'Fechar'
+              title: 'Erro!',
+              text: 'Não tem pessoas nesse andar',
+              button: 'Fechar'
             }
           })
         }
         break;
       }
-      default: this.dialog.open(ModalComponent, {
-        panelClass: 'custom-modal', backdropClass: 'blur',
-        data:{
-            title: 'Erro!',
-            text: 'Andar inexistente',
-            button: 'Fechar'
-        }
-      })
     }
   }
 
@@ -562,14 +538,6 @@ export class ElevadorComponent implements OnInit {
         this.andar3PortaAberta = true;
         break;
       }
-      default: this.dialog.open(ModalComponent, {
-        panelClass: 'custom-modal', backdropClass: 'blur',
-        data:{
-            title: 'Erro!',
-            text: 'Porta inexistente',
-            button: 'Fechar'
-        }
-      })
     }
   }
 
@@ -607,7 +575,9 @@ export class ElevadorComponent implements OnInit {
       case 0: {
         this.pessoaSair0 = false;
         if(!this.andar0Subir && !this.andar0Descer){
-          this.andar0PortaAberta = false;
+          setTimeout(() => {
+            this.andar0PortaAberta = false;
+          }, 2000);
           setTimeout(() => {
             this.subir(this.botao[0]);
             this.descer(this.botao[0]);
@@ -618,7 +588,9 @@ export class ElevadorComponent implements OnInit {
       case 1: {
         this.pessoaSair1 = false;
         if(!this.andar1Subir && !this.andar1Descer){
-          this.andar1PortaAberta = false;
+          setTimeout(() => {
+            this.andar1PortaAberta = false;
+          }, 2000);
           setTimeout(() => {
             this.subir(this.botao[0]);
             this.descer(this.botao[0]);
@@ -629,7 +601,9 @@ export class ElevadorComponent implements OnInit {
       case 2: {
         this.pessoaSair2 = false;
         if(!this.andar2Subir && !this.andar2Descer){
-          this.andar2PortaAberta = false;
+          setTimeout(() => {
+            this.andar2PortaAberta = false;
+          }, 2000);
           setTimeout(() => {
             this.subir(this.botao[0]);
             this.descer(this.botao[0]);
@@ -638,9 +612,14 @@ export class ElevadorComponent implements OnInit {
         break;
       }
       case 3: {
-        this.pessoaSair3 = false;
+        setTimeout(() => {
+          this.pessoaSair3 = false;
+        }, 1500);
+
         if(!this.andar3Subir && !this.andar3Descer){
-          this.andar3PortaAberta = false;
+          setTimeout(() => {
+            this.andar3PortaAberta = false;
+          }, 2000);
           setTimeout(() => {
             this.subir(this.botao[0]);
             this.descer(this.botao[0]);
@@ -652,55 +631,55 @@ export class ElevadorComponent implements OnInit {
   }
 
   botaoAndar(andar: number){
-
     if(this.pessoaElevador){
-
-      switch(this.andarElevador){
-        case 0: {
-          this.andar0PortaAberta = false;
-          this.pessoaElevador = true;
-          this.botao.splice(0, 1);
-          this.andar0Subir = false;
-          this.andar0Descer = false;
-          this.destino(andar);
-          break;
+      setTimeout(() => {
+        switch(this.andarElevador){
+          case 0: {
+            this.andar0PortaAberta = false;
+            this.pessoaElevador = true;
+            this.botao.splice(this.botao.indexOf(0), 1);
+            this.andar0Subir = false;
+            this.andar0Descer = false;
+            this.destino(andar);
+            break;
+          }
+          case 1: {
+            this.andar1PortaAberta = false;
+            this.pessoaElevador = true;
+            this.botao.splice(this.botao.indexOf(1), 1);
+            this.andar1Subir = false;
+            this.andar1Descer = false;
+            this.destino(andar);
+            break;
+          }
+          case 2: {
+            this.andar2PortaAberta = false;
+            this.pessoaElevador = true;
+            this.botao.splice(this.botao.indexOf(2), 1);
+            this.andar2Subir = false;
+            this.andar2Descer = false;
+            this.destino(andar);
+            break;
+          }
+          case 3: {
+            this.andar3PortaAberta = false;
+            this.pessoaElevador = true;
+            this.botao.splice(this.botao.indexOf(3), 1);
+            this.andar3Subir = false;
+            this.andar3Descer = false;
+            this.destino(andar);
+            break;
+          }
         }
-        case 1: {
-          this.andar1PortaAberta = false;
-          this.pessoaElevador = true;
-          this.botao.splice(0, 1);
-          this.andar1Subir = false;
-          this.andar1Descer = false;
-          this.destino(andar);
-          break;
-        }
-        case 2: {
-          this.andar2PortaAberta = false;
-          this.pessoaElevador = true;
-          this.botao.splice(0, 1);
-          this.andar2Subir = false;
-          this.andar2Descer = false;
-          this.destino(andar);
-          break;
-        }
-        case 3: {
-          this.andar3PortaAberta = false;
-          this.pessoaElevador = true;
-          this.botao.splice(0, 1);
-          this.andar3Subir = false;
-          this.andar3Descer = false;
-          this.destino(andar);
-          break;
-        }
-      }
+      }, 2000);
     }
     else{
       this.dialog.open(ModalComponent, {
         panelClass: 'custom-modal', backdropClass: 'blur',
         data:{
-            title: 'Erro!',
-            text: 'Não tem pessoa no elevador',
-            button: 'Fechar'
+          title: 'Erro!',
+          text: 'Não tem pessoa no elevador',
+          button: 'Fechar'
         }
       })
     }

@@ -20,10 +20,10 @@
               </div>
 
               <div *ngIf="andar3PortaAberta" class="elevador-andar">
-                <div class="elevador-aberto">
-                  <img *ngIf="!pessoaAndar3 && !pessoaSair3" class="pessoa-elevador" src="../../../../assets/pessoa.png">
-                  <img *ngIf="pessoaSair3" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()">
-                  <img *ngIf="pessoaAndar3 && !pessoaElevador" class="elevador-vazio">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar3 && !pessoaSair3 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair3" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair3 && !pessoaElevador" class="elevador-vazio">
                   <div class="botoeira">
                     <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
                     <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
@@ -53,10 +53,10 @@
               </div>
 
               <div *ngIf="andar2PortaAberta" class="elevador-andar">
-                <div class="elevador-aberto">
-                  <img *ngIf="!pessoaAndar2 && !pessoaSair2" class="pessoa-elevador" src="../../../../assets/pessoa.png">
-                  <img *ngIf="pessoaSair2" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()">
-                  <img *ngIf="pessoaAndar2 && !pessoaElevador" class="elevador-vazio">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar2 && !pessoaSair2 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair2" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair2 && !pessoaElevador" class="elevador-vazio">
                   <div class="botoeira">
                     <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
                     <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
@@ -86,10 +86,10 @@
               </div>
 
               <div *ngIf="andar1PortaAberta" class="elevador-andar">
-                <div class="elevador-aberto">
-                  <img *ngIf="!pessoaAndar1 && !pessoaSair1" class="pessoa-elevador" src="../../../../assets/pessoa.png">
-                  <img *ngIf="pessoaSair1" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()">
-                  <img *ngIf="pessoaAndar1 && !pessoaElevador" class="elevador-vazio">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar1 && !pessoaSair1 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair1" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair1 && !pessoaElevador" class="elevador-vazio">
                   <div class="botoeira">
                     <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
                     <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
@@ -121,10 +121,10 @@
               </div>
 
               <div *ngIf="andar0PortaAberta" class="elevador-andar">
-                <div class="elevador-aberto">
-                  <img *ngIf="!pessoaAndar0 && !pessoaSair0" class="pessoa-elevador" src="../../../../assets/pessoa.png">
-                  <img *ngIf="pessoaSair0" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()">
-                  <img *ngIf="pessoaAndar0 && !pessoaElevador" class="elevador-vazio">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar0 && !pessoaSair0 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair0" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair0 && !pessoaElevador" class="elevador-vazio">
                   <div class="botoeira">
                     <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
                     <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
