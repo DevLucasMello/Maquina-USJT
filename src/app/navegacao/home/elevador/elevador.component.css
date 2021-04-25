@@ -80,6 +80,7 @@
   width: 23%;
   height: 47%;
   margin-bottom: 3%;
+  cursor: pointer;
 }
 
 .pai-pessoa-andar{
@@ -110,6 +111,16 @@
 .botao-subir-descer{
   height: 50%;
   width: 100%;
+}
+
+.botao-subir-descer:hover{
+  cursor: pointer;
+}
+
+.botao-subir-descer:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
 }
 
 .elevador-andar{
@@ -170,6 +181,7 @@
   height: 60%;
   margin-left: 45%;
   margin-bottom: 3%;
+  cursor: pointer;
 }
 
 .elevador-vazio{
@@ -184,7 +196,16 @@
 .numero{
   width: 50%;
   height: 50%;
-  background-color: violet;
+}
+
+.numero:hover{
+  cursor: pointer;
+}
+
+.numero:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
 }
 
 .transicao{
@@ -256,6 +277,16 @@
   .botao-subir-descer{
     height: 50%;
     width: 100%;
+  }
+
+  .botao-subir-descer:hover{
+    cursor: pointer;
+  }
+
+  .botao-subir-descer:active{
+    position:relative;
+    top:5px;
+    box-shadow:none;
   }
 
   .ajuste-botao-baixo{
