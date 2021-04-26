@@ -410,7 +410,7 @@ export class ElevadorComponent implements OnInit {
                   text: 'O elevador não está neste andar',
                   button: 'Fechar'
                 }
-              })
+              });
             }
           }else{
             this.dialog.open(ModalComponent, {
@@ -420,7 +420,7 @@ export class ElevadorComponent implements OnInit {
                 text: 'Deixe as pessoas saírem para poder entrar',
                 button: 'Fechar'
               }
-            })
+            });
           }
         }
         else{
@@ -451,7 +451,7 @@ export class ElevadorComponent implements OnInit {
                   text: 'O elevador não está neste andar',
                   button: 'Fechar'
                 }
-              })
+              });
             }
           }else{
             this.dialog.open(ModalComponent, {
@@ -472,7 +472,7 @@ export class ElevadorComponent implements OnInit {
               text: 'Não tem pessoas nesse andar',
               button: 'Fechar'
             }
-          })
+          });
         }
         break;
       }
@@ -492,7 +492,7 @@ export class ElevadorComponent implements OnInit {
                   text: 'O elevador não está neste andar',
                   button: 'Fechar'
                 }
-              })
+              });
             }
           }else{
             this.dialog.open(ModalComponent, {
@@ -513,7 +513,7 @@ export class ElevadorComponent implements OnInit {
               text: 'Não tem pessoas nesse andar',
               button: 'Fechar'
             }
-          })
+          });
         }
         break;
       }
