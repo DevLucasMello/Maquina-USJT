@@ -1,0 +1,147 @@
+<div class="container main-container">
+  <div class="container">
+
+    <div class="caixa-principal">
+      <div class="pai-caixa-andar">
+
+        <div class="caixa-3andar">
+          <div class="pai-pessoa-andar">
+            <div class="andar">3º Andar</div>
+            <img *ngIf="pessoaAndar3" class="pessoa" src="../../../../assets/pessoa.png" (click)="pessoaAndar(3)">
+          </div>
+          <div class="pai-caixa-botao-elevador-andar">
+            <div class="numero-andar">T</div>
+            <div class="pai-botao-elevador">
+              <div class="botao-andar">
+                <img *ngIf="!andar3Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima.png" (click)="botaoSubir(3)">
+                <img *ngIf="andar3Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima-pressionado.png">
+                <img *ngIf="!andar3Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo.png" (click)="botaoDescer(3)">
+                <img *ngIf="andar3Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo-pressionado.png">
+              </div>
+
+              <div *ngIf="andar3PortaAberta" class="elevador-andar">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar3 && !pessoaSair3 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair3" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair3 && !pessoaElevador" class="elevador-vazio">
+                  <div class="botoeira">
+                    <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
+                    <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
+                    <img class="numero" src="../../../../assets/terreo.png" (click)="botaoAndar(0)">
+                    <img class="numero" src="../../../../assets/primeiro.png" (click)="botaoAndar(1)">
+                  </div>
+                </div>
+              </div>
+              <img *ngIf="!andar3PortaAberta" class="elevador-andar" src="../../../../assets/porta-fechada.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="caixa-2andar">
+          <div class="pai-pessoa-andar">
+            <div class="andar">2º Andar</div>
+            <img *ngIf="pessoaAndar2" class="pessoa" src="../../../../assets/pessoa.png" (click)="pessoaAndar(2)">
+          </div>
+          <div class="pai-caixa-botao-elevador-andar">
+            <div class="numero-andar">T</div>
+            <div class="pai-botao-elevador">
+              <div class="botao-andar">
+                <img *ngIf="!andar2Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima.png" (click)="botaoSubir(2)">
+                <img *ngIf="andar2Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima-pressionado.png">
+                <img *ngIf="!andar2Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo.png" (click)="botaoDescer(2)">
+                <img *ngIf="andar2Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo-pressionado.png">
+              </div>
+
+              <div *ngIf="andar2PortaAberta" class="elevador-andar">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar2 && !pessoaSair2 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair2" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair2 && !pessoaElevador" class="elevador-vazio">
+                  <div class="botoeira">
+                    <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
+                    <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
+                    <img class="numero" src="../../../../assets/terreo.png" (click)="botaoAndar(0)">
+                    <img class="numero" src="../../../../assets/primeiro.png" (click)="botaoAndar(1)">
+                  </div>
+                </div>
+              </div>
+              <img *ngIf="!andar2PortaAberta" class="elevador-andar" src="../../../../assets/porta-fechada.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="caixa-1andar">
+          <div class="pai-pessoa-andar">
+            <div class="andar">1º Andar</div>
+            <img *ngIf="pessoaAndar1" class="pessoa" src="../../../../assets/pessoa.png" (click)="pessoaAndar(1)">
+          </div>
+          <div class="pai-caixa-botao-elevador-andar">
+            <div class="numero-andar">T</div>
+            <div class="pai-botao-elevador">
+              <div class="botao-andar">
+                <img *ngIf="!andar1Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima.png" (click)="botaoSubir(1)">
+                <img *ngIf="andar1Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima-pressionado.png">
+                <img *ngIf="!andar1Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo.png" (click)="botaoDescer(1)">
+                <img *ngIf="andar1Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo-pressionado.png">
+              </div>
+
+              <div *ngIf="andar1PortaAberta" class="elevador-andar">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar1 && !pessoaSair1 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair1" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair1 && !pessoaElevador" class="elevador-vazio">
+                  <div class="botoeira">
+                    <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
+                    <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
+                    <img class="numero" src="../../../../assets/terreo.png" (click)="botaoAndar(0)">
+                    <img class="numero" src="../../../../assets/primeiro.png" (click)="botaoAndar(1)">
+                  </div>
+                </div>
+              </div>
+              <img *ngIf="!andar1PortaAberta" class="elevador-andar" src="../../../../assets/porta-fechada.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="caixa-terreo">
+          <div class="pai-pessoa-andar">
+            <div class="andar">Térreo</div>
+
+            <img *ngIf="pessoaAndar0" class="pessoa" src="../../../../assets/pessoa.png" (click)="pessoaAndar(0)">
+
+          </div>
+          <div class="pai-caixa-botao-elevador-andar">
+            <div class="numero-andar">T</div>
+            <div class="pai-botao-elevador">
+              <div class="botao-andar">
+                <img *ngIf="!andar0Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima.png" (click)="botaoSubir(0)">
+                <img *ngIf="andar0Subir" class="botao-subir-descer ajuste-botao-cima" src="../../../../assets/botao-cima-pressionado.png">
+                <img *ngIf="!andar0Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo.png" (click)="botaoDescer(0)">
+                <img *ngIf="andar0Descer" class="botao-subir-descer ajuste-botao-baixo" src="../../../../assets/botao-baixo-pressionado.png">
+              </div>
+
+              <div *ngIf="andar0PortaAberta" class="elevador-andar">
+                <div class="elevador-aberto transicao">
+                  <img *ngIf="!pessoaAndar0 && !pessoaSair0 && pessoaElevador" class="pessoa-elevador transicao" src="../../../../assets/pessoa.png">
+                  <img *ngIf="pessoaSair0" class="pessoa-elevador" src="../../../../assets/pessoa.png" (click)="pessoaSai()" [ngClass]="{'sumindo': !pessoaElevador}">
+                  <img *ngIf="!pessoaSair0 && !pessoaElevador" class="elevador-vazio">
+                  <div class="botoeira">
+                    <img class="numero" src="../../../../assets/segundo.png" (click)="botaoAndar(2)">
+                    <img class="numero" src="../../../../assets/terceiro.png" (click)="botaoAndar(3)">
+                    <img class="numero" src="../../../../assets/terreo.png" (click)="botaoAndar(0)">
+                    <img class="numero" src="../../../../assets/primeiro.png" (click)="botaoAndar(1)">
+                  </div>
+                </div>
+              </div>
+              <img *ngIf="!andar0PortaAberta" class="elevador-andar" src="../../../../assets/porta-fechada.png">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
